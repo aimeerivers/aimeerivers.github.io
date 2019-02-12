@@ -1,0 +1,44 @@
+.bubble {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255,0,0,0.4);
+  border-color: rgba(255,0,0,0.5);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+
+  animation-duration: 15s;
+  animation-name: addBubble;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.popped {
+  animation-duration: 1s;
+  animation-name: popBubble;
+  transition-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes addBubble {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes popBubble {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
