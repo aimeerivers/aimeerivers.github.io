@@ -7,6 +7,21 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
+    <meta property="og:locale" content="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+
+    {% if page.subtitle %}
+      <meta property="og:description" content="{{ page.subtitle }}" />
+    {% endif %}
+
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    {% if page.header-img %}
+      <meta property="og:image" content="{{ page.header-img }}" />
+    {% endif %}
+
 {% seo %}
   </head>
 
