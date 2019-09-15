@@ -1,9 +1,11 @@
 ---
 layout: default
-title:  "Københavns Cityring Metro"
+title: "Copenhagen's Cityring Metro"
 ---
 
-# Københavns Cityring Metro
+# Copenhagen's Cityring Metro
+
+I first went on a walk around Copenhagen's new Cityring metro line almost a year ago. It was fun to go back again and see how far they have come since then.
 
 ## Gammel Strand
 
@@ -33,4 +35,4 @@ title:  "Københavns Cityring Metro"
 
 {% include juxtapose.html uid="57f49a9e-d73a-11e9-b9b8-0edaf8f81e27" %}
 
-I hope you like it!
+I am really looking forward to the Cityring opening in 2 weeks time!
