@@ -2,7 +2,7 @@
 layout: default
 title: "Copenhagen's Cityring Metro"
 description: "Before and after shots of new stations"
-image: "https://s3-eu-west-1.amazonaws.com/cityringen/comparisons/2018-2019/n%C3%B8rrebros-runddel_2019.JPG"
+image: "https://s3-eu-west-1.amazonaws.com/cityringen/comparisons/2018-2019/2018-2019-share.png"
 ---
 
 # Copenhagen's Cityring Metro
