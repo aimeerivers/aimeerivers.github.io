@@ -38,7 +38,7 @@ Follow the tutorial to set location, set a password, and connect to a WiFi netwo
 
 ## Install TabCarousel plugin for Chromium
 
-Go to the Raspberry Pi menu -> Internet -> Chromium browser
+Go to the Raspberry Pi menu &rarr; Internet &rarr; Chromium browser
 
 Search for ant install TabCarousel plugin
 
@@ -46,7 +46,7 @@ Go to the plugin preferences and set how often you want it to cycle between tabs
 
 ## Advanced Raspberry Pi setup
 
-Go to the Raspberry Pi menu -> Settings -> Raspberry Pi Configuration
+Go to the Raspberry Pi menu &rarr; Settings &rarr; Raspberry Pi Configuration
 
 Under System, set a hosthame (I set mine to `piboard`).
 
