@@ -1,22 +1,22 @@
 ---
 layout: default
-title: "Building a Raspberry Pi dashboard display"
-description: "How to make any television into an awesome cycling dashboard"
+title: "Building a Raspberry Pi dashboard"
+description: "How to make any television into an awesome cycling dashboard display"
 # image: "https://s3-eu-west-1.amazonaws.com/cityringen/comparisons/2018-2019/2018-2019-share.png"
 ---
 
-# Building a Raspberry Pi dashboard display
+# Building a Raspberry Pi dashboard
 
-Imagine you have a spare television or monitor at work, not being used for anything, and you want to use it to display some websites in tabs, such as information dashboards. You want it to start in fullscreen mode and automatically loop through the tabs. Ideally you want this to start up just by turning the television on, and you want it to work independently without the need for a keyboard or mouse attached. Anyone should be able to configure which tabs are displayed by updating a document in GitHub.
+Imagine you have a spare television or monitor at work or home, not being used for anything, and you want to use it to display some websites in tabs, such as information dashboards. You want it to start in fullscreen mode and automatically loop through the tabs. Ideally you want this to start up just by turning the television on, and you want it to work independently without the need for a keyboard or mouse attached. Anyone should be able to configure which tabs are displayed by updating a document in GitHub.
 
 Grab your Raspberry Pi, because we're about to build a dashboard display!
 
 ## You will need
 
 * A spare television
-* A Raspberry Pi 4 (other models will work but generation 4 is silent, has built-in WiFi and has up to 4K HDMI output)
+* A Raspberry Pi 4 (other models will work but generation 4 is silent, has built-in WiFi and supports 4K HDMI output)
 * A micro-HDMI to HDMI cable
-* A USB to USB C to power the Raspberry Pi from USB output on the television
+* A USB to USB-C cable to power the Raspberry Pi from USB output on the television
 * A keyboard and mouse to set things up initially
 * Possibly: An SD card reader to write a new operating system to SD card
 
@@ -36,7 +36,7 @@ Connect your Raspberry Pi to the television HDMI and USB port, and it should sta
 
 Follow the tutorial to set location, set a password, and connect to a WiFi network. Now reboot.
 
-## Set up Chromium browser
+## Install TabCarousel plugin for Chromium
 
 Go to the Raspberry Pi menu -> Internet -> Chromium browser
 
@@ -103,7 +103,9 @@ Of course, you could put this file into a private repo if security is a concern,
 
 ## Write a script to launch the dashboard
 
-Create a dashboard.sh file
+We are going to make a script that reads the list of links and launches them in a fullscreen Chromium.
+
+Create a `dashboard.sh` file
 
     sudo nano /home/pi/dashboard.sh
 
@@ -115,7 +117,7 @@ Save this script to the file:
     export ORG=drdk
     export REPO=dashboards
     export BRANCH=main
-    export DASHBOARD=valhal
+    export DASHBOARD=teamqa.txt
 
     # don't let this display sleep
     export DISPLAY=:0.0
@@ -136,50 +138,64 @@ Save this script to the file:
       --no-first-run \
       --noerrdialogs \
       --disable-infobars \
-      $(curl -s "https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/${DASHBOARD}.txt") &
+      $(curl -s "https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/${DASHBOARD}") &
 
-Some notes about this script:
+The config options specify where exactly to find the list of links that should be opened when the browser is launched. In my case I'm using organisation `drdk`, a repository called `dashboards`, I want to use the `main` branch, and the filename I want to use is `teamqa.txt`.
 
-* The config options specify
+The second block sets the display to avoid sleeping, while the third block hides the mouse pointer.
 
-Make it executable
+The fourth block stops Chromium from complaining about unclean shutdown. Since we just want to turn off the television and suddenly cut power to the Raspberry Pi, it's likely that Chromium would get upset if we don't give it some reassurance.
 
-sudo chmod a+x /home/pi/dashboard.sh
+Finally we launch Chromium with the following options:
 
+* `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. You choose which you want. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case I ever need to do anything else on the Raspberry Pi.
+* `--no-first-run` - skips first-run checks (i.e. default browser)
+* `--noerrdialogs` - avoids showing any errors that could interfere with your dashboard experience
+* `--disable-infobars` - avoids annoying popups about detecting your location etc.
 
+Make this script executable by anyone
 
-Try it out
+    sudo chmod a+x /home/pi/dashboard.sh
 
-/home/pi/dashboard.sh
+Try it out!
 
+    /home/pi/dashboard.sh
 
+Within a few seconds, your Raspberry Pi should launch Chromium in fullscreen mode, and show the first of your list of links. After a short period, TabCarousel should automatically move it on to the next.
 
-Make a service to start up the dashboard
+Congratulations! You now have your dashboard display!
 
-sudo nano /etc/systemd/system/dashboard.service
+## Make it start up automatically
 
+Now we must make a service to start up the dashboard automatically every time the Raspberry Pi boots up.
 
-[Unit]
-Description=Chromium Dashboard
-After=network.target
-After=systemd-user-sessions.service
-After=network-online.target
-After=graphical.target
-Requires=graphical.target
-Requires=network-online.target
+Create a `dashboard.service` file
 
-[Service]
-Environment=DISPLAY=:0.0
-Environment=XAUTHORITY=/home/pi/.Xauthority
-Type=forking
-ExecStart=/home/pi/dashboard.sh
-ExecStartPre=/bin/sh -c 'until ping -c1 raw.githubusercontent.com; do sleep 1; done;'
-Restart=on-abort
-User=pi
-Group=pi
+    sudo nano /etc/systemd/system/dashboard.service
 
-[Install]
-WantedBy=graphical.target
+Save this configuration to the file:
+
+    [Unit]
+    Description=Pi Dashboard
+    After=network.target
+    After=systemd-user-sessions.service
+    After=network-online.target
+    After=graphical.target
+    Requires=graphical.target
+    Requires=network-online.target
+
+    [Service]
+    Environment=DISPLAY=:0.0
+    Environment=XAUTHORITY=/home/pi/.Xauthority
+    Type=forking
+    ExecStart=/home/pi/dashboard.sh
+    ExecStartPre=/bin/sh -c 'until ping -c1 raw.githubusercontent.com; do sleep 1; done;'
+    Restart=on-abort
+    User=pi
+    Group=pi
+
+    [Install]
+    WantedBy=graphical.target
 
 
 
