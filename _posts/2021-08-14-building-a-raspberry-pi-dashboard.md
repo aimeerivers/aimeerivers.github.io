@@ -188,8 +188,8 @@ Save this configuration to the file:
     Environment=DISPLAY=:0.0
     Environment=XAUTHORITY=/home/pi/.Xauthority
     Type=forking
-    ExecStart=/home/pi/dashboard.sh
     ExecStartPre=/bin/sh -c 'until ping -c1 raw.githubusercontent.com; do sleep 1; done;'
+    ExecStart=/home/pi/dashboard.sh
     Restart=on-abort
     User=pi
     Group=pi
@@ -197,48 +197,47 @@ Save this configuration to the file:
     [Install]
     WantedBy=graphical.target
 
-
+The script tries to wait for the network to be ready, but sometimes this isn't always successful. The network can be "ready" while DNS is still not active, for example. This would mean we cannot read the links list from GitHub, so the browser would start with an empty tab. To solve this, we use `ExecStartPre` to wait until we can get a response back from GitHub.
 
 Enable the service to run at boot
 
-sudo systemctl enable dashboard
+    sudo systemctl enable dashboard
 
+That should be it. In theory, you can now reboot your Raspberry Pi, and it will launch your dashboard display automatically.
 
-Start the service
+## Debugging problems
 
-sudo systemctl start dashboard
+To stop the dashboard service from SSH
 
+    sudo systemctl stop dashboard
 
-Stop the service
+To start the dashboard service from SSH
 
-sudo systemctl stop dashboard
+    sudo systemctl start dashboard
 
+Check the logs to find any issues with the service
 
+    sudo journalctl -u dashboard
 
-In case you have changed the service definition
+If you change the service definition you will need to reload it
 
-sudo systemctl daemon-reload
+    sudo systemctl daemon-reload
 
+## Enable emoji in Chromium
 
+The dashboard I'm using uses emoji for part of its information. By default these are not supported by Chromium on Raspberry Pi OS, but you can easily enable them.
 
-Debug the service
+    sudo apt-get install fonts-noto-color-emoji
+    sudo fc-cache -f -v
 
-sudo journalctl -u dashboard
+## Credit
 
+Thanks to the following sources for a lot of the inspiration that went into this post.
 
-
-
-
-
-
-Enable Emoji in browser
-
-sudo apt-get install fonts-noto-color-emoji
-
-sudo fc-cache -f -v
-
-
-
-
-https://jonathanmh.com/raspberry-pi-4-kiosk-wall-display-dashboard/
-
+* [Raspberry Pi (4) Kiosk / Wall Display / Dashboard](https://jonathanmh.com/raspberry-pi-4-kiosk-wall-display-dashboard/)
+* [Disable Low-voltage warning in Raspberry Pi](https://terminalwiki.com/disable-low-voltage-warning-in-raspberry-pi/)
+* [Low voltage warning message text](https://www.raspberrypi.org/forums/viewtopic.php?t=286821)
+* [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
+* [How to open a set of tabs together quickly?](https://superuser.com/questions/417205/how-to-open-a-set-of-tabs-together-quickly)
+* [Service unit configuration - systemd.service](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
+* [Tutorial: Colored emojis in Chromium](https://www.raspberrypi.org/forums/viewtopic.php?t=253484)
