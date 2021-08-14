@@ -97,7 +97,7 @@ Unclutter is a little program to hide the mouse pointer, to prevent it getting i
 
 Add a text file to a public GitHub repo with the links you want to open:
 
-![List of dashboard links](/images/piboard/list-of-dashboard-links.png)
+![List of dashboard links](/assets/images/piboard/list-of-dashboard-links.png)
 
 Of course, you could put this file into a private repo if security is a concern, but you would have to work a bit harder with the script that's going to read it to open the tabs.
 
