@@ -68,7 +68,7 @@ Accept the connection by typing `yes` and type the password that you configured 
 
 If you see a lightning bolt symbol in the corner of the screen, it's a warning that your television USB output is not supplying the ideal amount of power to the Raspberry Pi. There is a small risk that the Raspberry Pi could start to behave strangely or corrupt the SD card. If this concerns you, get a proper plug adapter and power your Raspberry Pi from a standard power socket.
 
-In my experience the risk is very small, and in the worst case scenario I would just reinstall Raspberry Pi OS and follow this tutorial again. I like the Raspberry Pi being powered by the television because it can be turned on and off just with a TV remote. So i choose to disable the warnings.
+In my experience the risk is very small, and in the worst case scenario I would just reinstall Raspberry Pi OS and follow this tutorial again. I like the Raspberry Pi being powered by the television because it can be turned on and off just with a TV remote. So I choose to disable the warnings.
 
 If you want to do this, it's time to start editing a file on the Raspberry Pi. From your SSH terminal:
 
