@@ -76,7 +76,7 @@ If you want to do this, it's time to start editing a file on the Raspberry Pi. F
 
 Add the following lines at the end of the file:
 
-    # Disable under-voltage warning
+    # Disable low voltage warning
     avoid_warnings=1
 
 Save the file and reboot the Raspberry Pi. You can do this remotely:
@@ -89,7 +89,7 @@ This will deal with the lighthing bolt symbol. You may find you still see a grey
 
 ## Install unclutter
 
-Unclutter is a little program to hide the mouse pointer, to prevent it getting in the wy when you don't need it. We're going to use this to keep our dashboard lovely and tidy.
+Unclutter is a little program to hide the mouse pointer, to prevent it getting in the way when you don't need it. We're going to use this to keep our dashboard lovely and tidy.
 
     sudo apt-get install unclutter
 
@@ -105,7 +105,7 @@ Of course, you could put this file into a private repo if security is a concern,
 
 We are going to make a script that reads the list of links and launches them in a fullscreen Chromium.
 
-Create a `dashboard.sh` file
+Create a `dashboard.sh` file:
 
     sudo nano /home/pi/dashboard.sh
 
@@ -140,20 +140,20 @@ Save this script to the file:
       --disable-infobars \
       $(curl -s "https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/${DASHBOARD}") &
 
-The config options specify where exactly to find the list of links that should be opened when the browser is launched. In my case I'm using organisation `drdk`, a repository called `dashboards`, I want to use the `main` branch, and the filename I want to use is `teamqa.txt`.
+The config options specify where exactly to find the list of links that should be opened when the browser is launched. In my case I'm using organisation `drdk`, a repository called `dashboards`, I want to use the `main` branch, and the filename I want to use is `teamqa.txt`. You should set these to the values that make sense for you.
 
 The second block sets the display to avoid sleeping, while the third block hides the mouse pointer.
 
-The fourth block stops Chromium from complaining about unclean shutdown. Since we just want to turn off the television and suddenly cut power to the Raspberry Pi, it's likely that Chromium would get upset if we don't give it some reassurance.
+The fourth block stops Chromium from complaining about unclean shutdown. Since at any time we might turn off the television, which will suddenly cut power to the Raspberry Pi, it's likely that Chromium would get upset if we don't give it some reassurance.
 
-Finally we launch Chromium with the following options:
+Lastly, the script launches Chromium with the following options:
 
 * `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. You choose which you want. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case I ever need to do anything else on the Raspberry Pi.
 * `--no-first-run` - skips first-run checks (i.e. default browser)
 * `--noerrdialogs` - avoids showing any errors that could interfere with your dashboard experience
 * `--disable-infobars` - avoids annoying popups about detecting your location etc.
 
-Make this script executable by anyone
+Make this script executable by anyone:
 
     sudo chmod a+x /home/pi/dashboard.sh
 
@@ -163,13 +163,13 @@ Try it out!
 
 Within a few seconds, your Raspberry Pi should launch Chromium in fullscreen mode, and show the first of your list of links. After a short period, TabCarousel should automatically move it on to the next.
 
-Congratulations! You now have your dashboard display!
+Congratulations! You now have a dashboard display!
 
 ## Make it start up automatically
 
-Now we must make a service to start up the dashboard automatically every time the Raspberry Pi boots up.
+Now we make a service to start the dashboard automatically every time the Raspberry Pi boots up.
 
-Create a `dashboard.service` file
+Create a `dashboard.service` file:
 
     sudo nano /etc/systemd/system/dashboard.service
 
@@ -199,7 +199,7 @@ Save this configuration to the file:
 
 The script tries to wait for the network to be ready, but sometimes this isn't always successful. The network can be "ready" while DNS is still not active, for example. This would mean we cannot read the links list from GitHub, so the browser would start with an empty tab. To solve this, we use `ExecStartPre` to wait until we can get a response back from GitHub.
 
-Enable the service to run at boot
+Enable the service to run at boot:
 
     sudo systemctl enable dashboard
 
@@ -207,25 +207,25 @@ That should be it. In theory, you can now reboot your Raspberry Pi, and it will 
 
 ## Debugging problems
 
-To stop the dashboard service from SSH
+To stop the dashboard service from SSH:
 
     sudo systemctl stop dashboard
 
-To start the dashboard service from SSH
+To start the dashboard service from SSH:
 
     sudo systemctl start dashboard
 
-Check the logs to find any issues with the service
+Check the logs to find any issues with the service:
 
     sudo journalctl -u dashboard
 
-If you change the service definition you will need to reload it
+If you change the service definition you will need to reload it:
 
     sudo systemctl daemon-reload
 
 ## Enable emoji in Chromium
 
-The dashboard I'm using uses emoji for part of its information. By default these are not supported by Chromium on Raspberry Pi OS, but you can easily enable them.
+The dashboard I'm using uses emoji for part of its information. By default these are not supported by Chromium on Raspberry Pi OS, but you can easily enable them:
 
     sudo apt-get install fonts-noto-color-emoji
     sudo fc-cache -f -v
