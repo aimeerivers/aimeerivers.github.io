@@ -176,7 +176,7 @@ Create a `dashboard.service` file:
 Save this configuration to the file:
 
     [Unit]
-    Description=Pi Dashboard
+    Description=Dashboard
     After=network.target
     After=systemd-user-sessions.service
     After=network-online.target
