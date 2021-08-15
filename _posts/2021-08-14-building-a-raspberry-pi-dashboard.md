@@ -9,6 +9,8 @@ image: "https://sermoa.github.io/assets/images/piboard/finished-dashboard.jpeg"
 
 Imagine you have a spare television or monitor at work or home, not being used for anything, and you want to use it to display some websites in tabs, such as information dashboards. You want it to start in fullscreen mode and automatically loop through the tabs. Ideally you want this to start up just by turning the television on, and you want it to work independently without the need for a keyboard or mouse attached. Anyone should be able to configure which tabs are displayed by updating a document in GitHub.
 
+![Working Raspberry Pi dashboard display](/assets/images/piboard/teaser-image.jpeg)
+
 Grab your Raspberry Pi, because we're about to build a dashboard display!
 
 ## You will need
