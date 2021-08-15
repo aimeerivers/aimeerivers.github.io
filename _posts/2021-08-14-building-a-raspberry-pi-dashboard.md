@@ -7,7 +7,7 @@ image: "https://sermoa.github.io/assets/images/piboard/finished-dashboard.jpeg"
 
 # Building a Raspberry Pi dashboard
 
-Imagine you have a spare television or monitor at work or home, not being used for anything, and you want to use it to display some websites in tabs, such as information dashboards. You want it to start in fullscreen mode and automatically loop through the tabs. Ideally you want this to start up just by turning the television on, and you want it to work independently without the need for a keyboard or mouse attached. Anyone should be able to configure which tabs are displayed by updating a document in GitHub.
+Imagine you have a spare television at work or home, and you want to use it to display some information dashboards. You want it to start in fullscreen mode and automatically loop through a list of tabs. You want this to happen just by turning the television on, and you want control over the tabs without the need for a keyboard or mouse attached. Anyone should be able to configure which tabs are displayed by updating a document in GitHub.
 
 ![Working Raspberry Pi dashboard display](/assets/images/piboard/teaser-image.jpeg)
 
@@ -24,7 +24,7 @@ Grab your Raspberry Pi, because we're about to build a dashboard display!
 
 ![You will need](/assets/images/piboard/you-will-need.jpeg)
 
-Time required: about 20-30 minutes.
+Time required: about 30-45 minutes.
 
 ## What this tutorial is not
 
@@ -80,11 +80,11 @@ Reboot again.
 
 ## Check SSH access
 
-Of course it is possible to follow this entire tutorial with a keyboard and mouse attached directly to the Raspberry Pi, but that's not always the most practical solution. So you can go to another computer connected to the same WiFi network, and SSH in.
+Of course it is possible to follow this entire tutorial with a keyboard and mouse attached directly to the Raspberry Pi, but if you prefer, you can use to another computer connected to the same WiFi network, and SSH in.
 
     ssh pi@piboard.local
 
-Accept the connection by typing `yes` and type the password that you configured for the Raspberry Pi, and you will be in!
+Trust the connection by typing `yes` and type the password that you configured for the Raspberry Pi, and you will be in!
 
 ![SSH access successful](/assets/images/piboard/ssh-access-successful.png)
 
@@ -94,9 +94,9 @@ If you see a lightning bolt symbol in the corner of the screen, it's a warning t
 
 ![Low voltage lightning bolt warning](/assets/images/piboard/low-voltage-lightning-bolt.jpeg)
 
-In my experience the risk is very small, and in the worst case scenario I would just reinstall Raspberry Pi OS and follow this tutorial again. I like the Raspberry Pi being powered by the television because it can be turned on and off just with a TV remote. So I choose to disable the warnings.
+In my experience, the risk of corruption is very small, and in the worst case scenario I would just reinstall Raspberry Pi OS and follow this tutorial again. I like the Raspberry Pi being powered by the television because it can be turned on and off just with a TV remote. So I choose to disable the warnings.
 
-If you want to do this, it's time to start editing a file on the Raspberry Pi. From your SSH terminal:
+If you want to do this, it's time to start editing a file on the Raspberry Pi. From your SSH terminal (or the terminal program on the Raspberry Pi itself) type:
 
     sudo nano /boot/config.txt
 
@@ -105,11 +105,9 @@ Add the following lines at the end of the file:
     # Disable low voltage warning
     avoid_warnings=1
 
-Save the file and reboot the Raspberry Pi. You can do this from your SSH connection by typing:
+Save the file and reboot the Raspberry Pi. This will deal with the lighthing bolt symbol.
 
-    sudo reboot
-
-This will deal with the lighthing bolt symbol. You may find you still see a grey warning box.
+You may find you still see a grey warning box.
 
 ![Low voltage warning](/assets/images/piboard/low-voltage-warning.jpeg)
 
