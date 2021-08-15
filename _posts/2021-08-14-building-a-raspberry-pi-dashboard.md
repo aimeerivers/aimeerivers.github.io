@@ -22,6 +22,8 @@ Grab your Raspberry Pi, because we're about to build a dashboard display!
 * A keyboard and mouse to set things up initially
 * Possibly: A micro-SD card reader to write a new operating system to SD card
 
+![You will need](/assets/images/piboard/you-will-need.jpeg)
+
 Time required: about 20-30 minutes.
 
 ## What this tutorial is not
