@@ -92,6 +92,8 @@ Accept the connection by typing `yes` and type the password that you configured 
 
 If you see a lightning bolt symbol in the corner of the screen, it's a warning that your television USB output is not supplying the ideal amount of power to the Raspberry Pi. There is a small risk that the Raspberry Pi could start to behave strangely or corrupt the SD card. If this concerns you, get a proper plug adapter and power your Raspberry Pi from a standard power socket.
 
+![Low voltage lightning bolt warning](/assets/images/piboard/low-voltage-lightning-bolt.jpeg)
+
 In my experience the risk is very small, and in the worst case scenario I would just reinstall Raspberry Pi OS and follow this tutorial again. I like the Raspberry Pi being powered by the television because it can be turned on and off just with a TV remote. So I choose to disable the warnings.
 
 If you want to do this, it's time to start editing a file on the Raspberry Pi. From your SSH terminal:
@@ -107,7 +109,11 @@ Save the file and reboot the Raspberry Pi. You can do this from your SSH connect
 
     sudo reboot
 
-This will deal with the lighthing bolt symbol. You may find you still see a grey warning box. If this is the case, you can disable this too:
+This will deal with the lighthing bolt symbol. You may find you still see a grey warning box.
+
+![Low voltage warning](/assets/images/piboard/low-voltage-warning.jpeg)
+
+You can disable this too:
 
     sudo apt-get -y remove lxplug-ptbatt
 
@@ -189,6 +195,8 @@ Try it out!
 
 Within a few seconds, your Raspberry Pi should launch Chromium in fullscreen mode, and show the first of your list of links. After a short period, TabCarousel should automatically move it on to the next.
 
+![Dashboard running](/assets/images/piboard/dashboard-running.jpeg)
+
 Congratulations! You now have a dashboard display!
 
 ## Make it start up automatically
@@ -245,6 +253,8 @@ Check the logs to find any issues with the service:
 
     sudo journalctl -u dashboard
 
+![Journalctl log file](/assets/images/piboard/journalctl-log-file.png)
+
 If you change the service definition you will need to reload it:
 
     sudo systemctl daemon-reload
@@ -255,6 +265,10 @@ The dashboard I'm using uses emoji for part of its information. By default these
 
     sudo apt-get -y install fonts-noto-color-emoji
     sudo fc-cache -f -v
+
+![Emoji enabled](/assets/images/piboard/emoji-enabled.jpeg)
+
+Dashboard now with emoji enabled.
 
 ## Credits
 
