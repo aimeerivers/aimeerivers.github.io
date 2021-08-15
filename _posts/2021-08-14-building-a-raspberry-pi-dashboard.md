@@ -54,9 +54,13 @@ Follow the tutorial to set location, set a password, and connect to a WiFi netwo
 
 Go to the Raspberry Pi menu &rarr; Internet &rarr; Chromium Web Browser
 
-Search for ant install TabCarousel plugin
+Search for and install TabCarousel plugin
 
-Go to the plugin preferences and set how often you want it to cycle between tabs, and set it to start automatically.
+![Install TabCarousel](/assets/images/piboard/install-tab-carousel.jpeg)
+
+Go to the plugin preferences and set how often you want it to cycle between tabs (15000 ms being every 15 seconds), and set it to start automatically.
+
+![TabCarousel settings](/assets/images/piboard/tab-carousel-settings.jpeg)
 
 ## Advanced Raspberry Pi setup
 
