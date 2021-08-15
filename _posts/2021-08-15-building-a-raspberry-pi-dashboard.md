@@ -170,7 +170,7 @@ Save this script to the file:
       --disable-infobars \
       $(curl -s "https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/${DASHBOARD}") &
 
-The config options specify where exactly to find the list of links that should be opened when the browser is launched. In my case I'm using organisation `drdk`, a repository called `dashboards`, I want to use the `main` branch, and the filename I want to use is `teamqa.txt`. You should set these to the values that make sense for you.
+The config options specify where on GitHub to find the list of links that should be opened when the browser is launched. In my case I'm using organisation `drdk`, a repository called `dashboards`, I want to use the `main` branch, and the filename I want to use is `teamqa.txt`. You should set these to the values that make sense for you.
 
 The second block sets the display to avoid sleeping, while the third block hides the mouse pointer.
 
