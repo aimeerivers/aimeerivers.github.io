@@ -44,6 +44,8 @@ Connect your SD card reader to your computer and go through the imaging process 
 
 Put the micro-SD card back into your Raspberry Pi. Connect your Raspberry Pi to the television HDMI and USB port, turn on the television, and the Rasbperry Pi should start to boot up. At this point you'll want to use a keyboard and mouse connected to the Raspberry Pi to set up the initial configuration.
 
+![Initial Raspberry Pi setup](/assets/images/piboard/initial-pi-setup.jpeg)
+
 Follow the tutorial to set location, set a password, and connect to a WiFi network. Allow the Raspberry Pi to update software. This can take a few minutes. Now reboot.
 
 ## Install TabCarousel plugin for Chromium
