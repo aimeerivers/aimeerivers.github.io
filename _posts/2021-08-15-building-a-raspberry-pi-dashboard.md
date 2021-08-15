@@ -178,7 +178,7 @@ The fourth block stops Chromium from complaining about unclean shutdown. Since a
 
 Lastly, the script launches Chromium with the following options:
 
-* `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. You choose which you want. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case I ever need to do anything else on the Raspberry Pi.
+* `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case I ever need to do anything else on the Raspberry Pi.
 * `--no-first-run` - skips first-run checks (i.e. default browser)
 * `--noerrdialogs` - avoids showing any errors that could interfere with your dashboard experience
 * `--disable-infobars` - avoids annoying popups about detecting your location etc.
