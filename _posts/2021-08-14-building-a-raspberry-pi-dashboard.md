@@ -58,7 +58,7 @@ Search for and install TabCarousel plugin
 
 ![Install TabCarousel](/assets/images/piboard/install-tab-carousel.jpeg)
 
-Go to the plugin preferences and set how often you want it to cycle between tabs (15000 ms being every 15 seconds), and set it to start automatically.
+Go to TabCarousel options and set how often you want it to cycle between tabs (15000 ms being every 15 seconds), and set it to start automatically.
 
 ![TabCarousel settings](/assets/images/piboard/tab-carousel-settings.jpeg)
 
@@ -68,19 +68,25 @@ Go to the Raspberry Pi menu &rarr; Preferences &rarr; Raspberry Pi Configuration
 
 Under System, set a hosthame (I set mine to `piboard`).
 
+![Raspberry Pi system configuration](/assets/images/piboard/raspberry-pi-system-configuration.jpeg)
+
 Make sure it is set to boot to desktop, and auto login as current user (it might say As user 'pi').
 
 Under Interfaces, enable SSH.
+
+![Raspberry Pi - enable SSH](/assets/images/piboard/raspberry-pi-enable-ssh.jpeg)
 
 Reboot again.
 
 ## Check SSH access
 
-Of course it is possible to follow this entire tutorial with a keyboard and mouse attached directly to the Raspberry Pi, but that's not always the most practical solution. So you can go to another computer connected to the same WiFi network, and ssh in.
+Of course it is possible to follow this entire tutorial with a keyboard and mouse attached directly to the Raspberry Pi, but that's not always the most practical solution. So you can go to another computer connected to the same WiFi network, and SSH in.
 
     ssh pi@piboard.local
 
 Accept the connection by typing `yes` and type the password that you configured for the Raspberry Pi, and you will be in!
+
+![SSH access successful](/assets/images/piboard/ssh-access-successful.png)
 
 ## Disable low voltage warnings
 
