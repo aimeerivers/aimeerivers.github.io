@@ -18,27 +18,29 @@ Grab your Raspberry Pi, because we're about to build a dashboard display!
 * A micro-HDMI to HDMI cable
 * A USB to USB-C cable to power the Raspberry Pi from USB output on the television
 * A keyboard and mouse to set things up initially
-* Possibly: An SD card reader to write a new operating system to SD card
+* Possibly: A micro-SD card reader to write a new operating system to SD card
+
+Time required: about 20-30 minutes.
 
 ## What this tutorial is not
 
-This tutorial assumes you already have some dashbard websites on the internet that you want to display, maybe from Google Analytics, Kibana, Grafana, etc. This tutorial does not cover the creation of such dashboards.
+This tutorial assumes you already have some dashboard websites on the internet that you want to display, maybe from Google Analytics, Kibana, Grafana, etc. This tutorial does not cover the creation of such dashboards.
 
 ## Start with Raspberry Pi OS
 
 My recommendation is you head to [raspberrypi.org](https://www.raspberrypi.org) and download the latest Raspberry Pi OS imager. If you've just bought a new Raspberry Pi, it's likely it already has an OS installed, so you can skip this step.
 
-Connect your SD card reader to your computer and go through the imaging process to write Raspberry Pi OS (32-bit) to the SD card.
+Connect your SD card reader to your computer and go through the imaging process to write Raspberry Pi OS (32-bit) to the micro-SD card.
 
 ## Initial Raspberry Pi setup
 
-Connect your Raspberry Pi to the television HDMI and USB port, and it should start to boot up. At this point you'll want to use a keyboard and mouse connected to the Raspberry Pi to set up the initial configuration.
+Put the micro-SD card back into your Raspberry Pi. Connect your Raspberry Pi to the television HDMI and USB port, turn on the television, and the Rasbperry Pi should start to boot up. At this point you'll want to use a keyboard and mouse connected to the Raspberry Pi to set up the initial configuration.
 
-Follow the tutorial to set location, set a password, and connect to a WiFi network. Now reboot.
+Follow the tutorial to set location, set a password, and connect to a WiFi network. Allow the Raspberry Pi to update software. This can take a few minutes. Now reboot.
 
 ## Install TabCarousel plugin for Chromium
 
-Go to the Raspberry Pi menu &rarr; Internet &rarr; Chromium browser
+Go to the Raspberry Pi menu &rarr; Internet &rarr; Chromium Web Browser
 
 Search for ant install TabCarousel plugin
 
@@ -46,11 +48,11 @@ Go to the plugin preferences and set how often you want it to cycle between tabs
 
 ## Advanced Raspberry Pi setup
 
-Go to the Raspberry Pi menu &rarr; Settings &rarr; Raspberry Pi Configuration
+Go to the Raspberry Pi menu &rarr; Preferences &rarr; Raspberry Pi Configuration
 
 Under System, set a hosthame (I set mine to `piboard`).
 
-Make sure it is set to boot to desktop, and auto login as user 'pi'.
+Make sure it is set to boot to desktop, and auto login as current user (it might say As user 'pi').
 
 Under Interfaces, enable SSH.
 
@@ -79,19 +81,21 @@ Add the following lines at the end of the file:
     # Disable low voltage warning
     avoid_warnings=1
 
-Save the file and reboot the Raspberry Pi. You can do this remotely:
+Save the file and reboot the Raspberry Pi. You can do this from your SSH connection by typing:
 
     sudo reboot
 
 This will deal with the lighthing bolt symbol. You may find you still see a grey warning box. If this is the case, you can disable this too:
 
-    sudo apt-get remove lxplug-ptbatt
+    sudo apt-get -y remove lxplug-ptbatt
+
+This change will take effect after another reboot.
 
 ## Install unclutter
 
 Unclutter is a little program to hide the mouse pointer, to prevent it getting in the way when you don't need it. We're going to use this to keep our dashboard lovely and tidy.
 
-    sudo apt-get install unclutter
+    sudo apt-get -y install unclutter
 
 ## Create a links file
 
@@ -197,13 +201,13 @@ Save this configuration to the file:
     [Install]
     WantedBy=graphical.target
 
-The script tries to wait for the network to be ready, but sometimes this isn't always successful. The network can be "ready" while DNS is still not active, for example. This would mean we cannot read the links list from GitHub, so the browser would start with an empty tab. To solve this, we use `ExecStartPre` to wait until we can get a response back from GitHub.
+The script tries to wait for the network to be ready, but sometimes this isn't always successful. The network can be "ready" whilst DNS is still not yet active, for example. This would mean we cannot read the links list from GitHub, so the browser would start with an empty tab. To avoid this, we use `ExecStartPre` to wait until we can get a response back from GitHub. Then we call the dashboard script that we made just now.
 
 Enable the service to run at boot:
 
     sudo systemctl enable dashboard
 
-That should be it. In theory, you can now reboot your Raspberry Pi, and it will launch your dashboard display automatically.
+That should be it. In theory you can now turn your television off and on again, and your Raspberry Pi will boot up and launch your dashboard display automatically in fullscreen mode, and cycle through the links you wanted.
 
 ## Debugging problems
 
@@ -227,10 +231,10 @@ If you change the service definition you will need to reload it:
 
 The dashboard I'm using uses emoji for part of its information. By default these are not supported by Chromium on Raspberry Pi OS, but you can easily enable them:
 
-    sudo apt-get install fonts-noto-color-emoji
+    sudo apt-get -y install fonts-noto-color-emoji
     sudo fc-cache -f -v
 
-## Credit
+## Credits
 
 Thanks to the following sources for a lot of the inspiration that went into this post.
 
