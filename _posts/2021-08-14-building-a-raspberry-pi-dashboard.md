@@ -36,6 +36,10 @@ My recommendation is you head to [raspberrypi.org](https://www.raspberrypi.org) 
 
 Connect your SD card reader to your computer and go through the imaging process to write Raspberry Pi OS (32-bit) to the micro-SD card.
 
+![SD card reader attached to computer](/assets/images/piboard/sd-card-reader.jpeg)
+
+![Write Raspberry Pi OS to the micro-SD card](/assets/images/piboard/install-rapsberry-pi-os.png)
+
 ## Initial Raspberry Pi setup
 
 Put the micro-SD card back into your Raspberry Pi. Connect your Raspberry Pi to the television HDMI and USB port, turn on the television, and the Rasbperry Pi should start to boot up. At this point you'll want to use a keyboard and mouse connected to the Raspberry Pi to set up the initial configuration.
