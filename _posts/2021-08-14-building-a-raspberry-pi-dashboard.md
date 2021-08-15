@@ -46,6 +46,8 @@ Put the micro-SD card back into your Raspberry Pi. Connect your Raspberry Pi to 
 
 ![Initial Raspberry Pi setup](/assets/images/piboard/initial-pi-setup.jpeg)
 
+![Plugged into the television](/assets/images/piboard/back-of-television.jpeg)
+
 Follow the tutorial to set location, set a password, and connect to a WiFi network. Allow the Raspberry Pi to update software. This can take a few minutes. Now reboot.
 
 ## Install TabCarousel plugin for Chromium
