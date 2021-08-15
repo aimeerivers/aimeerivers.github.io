@@ -2,7 +2,7 @@
 layout: default
 title: "Building a Raspberry Pi dashboard"
 description: "How to make any television into an awesome cycling dashboard display"
-# image: "https://s3-eu-west-1.amazonaws.com/cityringen/comparisons/2018-2019/2018-2019-share.png"
+image: "https://sermoa.github.io/assets/images/piboard/finished-dashboard.jpeg"
 ---
 
 # Building a Raspberry Pi dashboard
