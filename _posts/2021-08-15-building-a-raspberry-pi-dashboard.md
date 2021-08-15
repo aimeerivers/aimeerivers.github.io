@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Building a Raspberry Pi dashboard"
-description: "How to make any television into an awesome cycling dashboard display"
+description: "How to turn any television into an awesome dashboard display"
 image: "https://sermoa.github.io/assets/images/piboard/finished-dashboard.jpeg"
 ---
 
