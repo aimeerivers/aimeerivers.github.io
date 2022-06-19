@@ -7,17 +7,19 @@ description: "Just some things that interest me"
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <article>
-    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
     <h2>
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </h2>
+    <small>
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+    </small>
     <p>
       {{ post.content | strip_html | truncatewords: 100 }}
     </p>
   </article>
-  <br>
+  <br><br>
 {% endfor %}
 
 <!-- Pagination links -->
