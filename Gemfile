@@ -1,0 +1,5 @@
+source "http://rubygems.org"
+
+gem "jekyll"
+gem "jekyll-theme-cayman"
+gem "webrick"
