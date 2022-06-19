@@ -1,3 +1,7 @@
 theme: jekyll-theme-cayman
 title: Aimee Rivers
 lang: en-GB
+
+plugins:
+  - jekyll-paginate
+paginate: 10
