@@ -34,7 +34,7 @@ Sometimes it seemed to match the curve of the bank but flip it round the wrong w
 
 ## Hugin
 
-What i needed was a way of choosing the match points myself. I remembered [Hugin](https://hugin.sourceforge.io/), an open-source photo tool i used to use to stitch panoramas together. That had a way of matching common elements between photos. What if that could be used for layering similar photos taken at a different time?
+What i needed was a way of choosing the match points myself. I remembered [Hugin](https://hugin.sourceforge.io/), an open-source photo tool i used to use to stitch panoramas together. That had a way of matching common elements between photos. What if that could be used for layering similar photos taken at a different times?
 
 I installed Hugin and loaded the images.
 
