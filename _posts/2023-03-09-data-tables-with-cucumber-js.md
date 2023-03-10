@@ -161,7 +161,7 @@ Creating Hilda White (hw@example.com) who lives in Owensboro and was born 1933-0
 
 # Bonus option: Scenario Outline
 
-It's also possible to use a Scenario Outline which is not a table step at all but sends options using a table format.
+It's also possible to use a Scenario Outline which is not a table step at all but sends example values using a table format.
 
 In this example, the whole scenario will run for each row in the examples table.
 
