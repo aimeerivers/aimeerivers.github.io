@@ -1,4 +1,6 @@
-# sermoa.github.io
+# aimeerivers.github.io
+
+My sporadic [blog](https://www.aimeerivers.com/), made with Jekyll, hosted on GitHub
 
 ## Running locally
 
