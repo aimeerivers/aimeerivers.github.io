@@ -122,7 +122,7 @@ Cucumber uses a "World" to share context between steps. Set this up in `e2e/feat
 ```typescript
 import { setDefaultTimeout, setWorldConstructor, World } from "@cucumber/cucumber";
 
-setDefaultTimeout(30 * 1000);
+setDefaultTimeout(60 * 1000);
 
 export class CustomWorld extends World {
   appLaunched = false;
@@ -141,15 +141,15 @@ import { AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
 import { device } from "detox";
 import { cleanup, init } from "detox/internals";
 
-BeforeAll({ timeout: 120 * 1000 }, async () => {
+BeforeAll({ timeout: 30 * 1000 }, async () => {
   await init();
 });
 
-Before({ timeout: 120 * 1000 }, async () => {
+Before({ timeout: 30 * 1000 }, async () => {
   await device.launchApp({ delete: true, newInstance: true });
 });
 
-AfterAll({ timeout: 120 * 1000 }, async () => {
+AfterAll({ timeout: 30 * 1000 }, async () => {
   await cleanup();
 });
 ```
@@ -176,7 +176,7 @@ import { by, device, element, expect, waitFor } from "detox";
 import { CustomWorld } from "../support/world";
 
 Given("the app is launched", async function (this: CustomWorld) {
-  await waitFor(element(by.text("Welcome"))).toBeVisible().withTimeout(5000);
+  await waitFor(element(by.text("Welcome"))).toBeVisible().withTimeout(1000);
   this.appLaunched = true;
 });
 
