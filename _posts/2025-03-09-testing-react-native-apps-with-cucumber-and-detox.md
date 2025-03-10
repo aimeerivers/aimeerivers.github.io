@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Testing React-Native apps with Cucumber and Detox"
-description: "Yes, it can be done!"
+description: "A working guide as of March 2025"
 ---
 
 ## Introduction
