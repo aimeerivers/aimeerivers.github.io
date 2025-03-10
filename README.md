@@ -18,6 +18,11 @@ If you then experience `rubymain.cpp:220:3: warning: 'rb_rescue' is deprecated: 
 
     bundle config build.eventmachine --with-cppflags=-I$(brew --prefix openssl)/include --with-openssl-dir=$(brew --prefix openssl)
 
+
+If you expericence `Error running '__rvm_make -j10'`
+
+    rvm install ruby-3.1.2 --with-openssl-dir=$(brew --prefix openssl@3)
+
 Then try again
 
 ### Run the Jekyll server
