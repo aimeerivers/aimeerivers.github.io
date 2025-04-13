@@ -16,6 +16,13 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
+      
+      {% if page.url contains ".html" %}
+        <div class="back-to-root"><a href="{{ '/blog' | relative_url }}">&lt; blog</a></div>
+      {% elsif page.url != "/" %}
+      <div class="back-to-root"><a href="{{ '/' | relative_url }}">&lt; home</a></div>
+      {% endif %}
+      
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
