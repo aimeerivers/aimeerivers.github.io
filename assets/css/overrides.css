@@ -3,3 +3,12 @@
   margin: 0 auto;
   border-radius: 10px;
 }
+
+.pagination, .site-footer {
+  text-align: center;
+}
+
+.site-footer-owner {
+  font-size: 0.9em;
+  font-weight: normal;
+}

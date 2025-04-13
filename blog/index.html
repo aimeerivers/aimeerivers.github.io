@@ -33,7 +33,7 @@ image: "https://aimeerivers.github.io/assets/images/og-image.png"
     <span class="previous">&lt; Previous</span>
   {% endif %}
   <span class="page_number ">
-    | Page {{ paginator.page }} of {{ paginator.total_pages }} |
+    | <strong>Page {{ paginator.page }} of {{ paginator.total_pages }}</strong> |
   </span>
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="next">Next &gt;</a>
