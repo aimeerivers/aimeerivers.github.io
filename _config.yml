@@ -4,4 +4,4 @@ lang: en-GB
 
 plugins:
   - jekyll-paginate
-paginate: 10
+paginate: 5
