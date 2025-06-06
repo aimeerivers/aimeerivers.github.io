@@ -4,5 +4,5 @@ lang: en-GB
 
 plugins:
   - jekyll-paginate
-paginate: 5
+paginate: 6
 paginate_path: "/blog/page:num/"
