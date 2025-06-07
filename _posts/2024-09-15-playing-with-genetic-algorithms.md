@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Playing with genetic algorithms"
-description: "Using genetic algorithms to make images out of triangles"
-image: "https://www.aimeerivers.com/assets/images/genetic-algorithms/og-image.jpg"
+title: Playing with genetic algorithms
+description: Using genetic algorithms to make images out of triangles
+image: https://www.aimeerivers.com/assets/images/genetic-algorithms/og-image.jpg
 ---
 
 Genetic algorithms take inspiration from biology to solve difficult problems. A population undergoes selection, competition, cross-breeding and random mutation to produce the next generation. After iterating over many generations, the entire population becomes closer to optimum, however you define that.

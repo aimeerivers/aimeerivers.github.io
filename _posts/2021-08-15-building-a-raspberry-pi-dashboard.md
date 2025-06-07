@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Building a Raspberry Pi dashboard"
-description: "How to turn any television into an awesome dashboard display"
-image: "https://www.aimeerivers.com/assets/images/piboard/finished-dashboard.jpeg"
 light_mode: true
+title: Building a Raspberry Pi dashboard
+description: How to turn any television into an awesome dashboard display
+image: https://www.aimeerivers.com/assets/images/piboard/finished-dashboard.jpeg
 ---
 
 Imagine you have a spare television at work or home, and you want to use it to display some information dashboards. You want it to start in fullscreen mode and automatically loop through a list of tabs. You want this to happen just by turning the television on, and you want control over the tabs without the need for a keyboard or mouse attached. Anyone should be able to configure which tabs are displayed by updating a document in GitHub.

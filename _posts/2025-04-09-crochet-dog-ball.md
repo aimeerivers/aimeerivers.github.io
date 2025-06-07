@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Crochet Dog Ball"
-description: "A fun and safe toy for your furry friend"
-image: "https://www.aimeerivers.com/assets/images/crochet/dog-ball/og-image.jpg"
 light_mode: true
+title: Crochet Dog Ball
+description: A fun and safe toy for your furry friend
+image: https://www.aimeerivers.com/assets/images/crochet/dog-ball/og-image.jpg
 ---
 
 ## Summary

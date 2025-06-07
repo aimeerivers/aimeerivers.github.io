@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Data tables with cucumber-js"
-description: "How to use Cucumber data tables with Javascript/Typescript"
-image: "https://www.aimeerivers.com/assets/images/data-tables/og-image.png"
+title: Data tables with cucumber-js
+description: How to use Cucumber data tables with Javascript/Typescript
+image: https://www.aimeerivers.com/assets/images/data-tables/og-image.png
 ---
 
 For years i have been using Cucumber with Ruby, but i've recently changed job and now i am using Javascript/Typescript.
