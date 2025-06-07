@@ -22,7 +22,7 @@
     "lint": "eslint --fix",
     "lint:check": "eslint",
     "package:lint": "npx npm-package-json-lint .",
-    "start": "rvm use ruby-3.1.2@blog; bundle exec jekyll serve --livereload",
+    "start": "bundle exec jekyll serve --livereload",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
