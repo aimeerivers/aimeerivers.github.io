@@ -85,8 +85,6 @@ The diminishing returns means that generation 10000 isn't all that much differen
 
 ![Generation 3280](/assets/images/genetic-algorithms/generation_10000.png)
 
-
-
 ## What i learned from all of this
 
 The beauty of genetic algorithms is there are so many things you can tweak: population size, selection rate, competition method, breeding mechanism, mutation strategies. I tried many different things and watched how it affected the fitness over time.

@@ -19,10 +19,10 @@ Here’s how I got Detox to play nicely with Cucumber and TypeScript.
 
 I quickly learned that versions matter, so let me state up front the versions I’m using:
 
-* `cucumber` 11.2.0 - March 2025
-* `detox` 20.34.4 - March 2025
-* `detox-cli` 20.0.0 - November 2022
-* `tsx` 4.19.3 - February 2025
+- `cucumber` 11.2.0 - March 2025
+- `detox` 20.34.4 - March 2025
+- `detox-cli` 20.0.0 - November 2022
+- `tsx` 4.19.3 - February 2025
 
 ## Install Dependencies
 
@@ -59,6 +59,7 @@ You can skip this step if Detox is already set up in your project.
 By default, Detox assumes you’ll use `jest` as your test runner. To switch to `cucumber-js`, update the `.detoxrc.js` file. It should start like this:
 
 `./.detoxrc.js`
+
 ```javascript
 module.exports = {
   testRunner: {
@@ -90,8 +91,8 @@ This will generate a binary version of your app that Detox can use for testing.
 
 Detox likely generated some Jest-based test templates, which you won’t need. You can safely remove them. In my case, these were:
 
-* `e2e/jest.config.js`
-* `e2e/starter.test.js`
+- `e2e/jest.config.js`
+- `e2e/starter.test.js`
 
 Instead, you’ll create a few files to configure Cucumber and bootstrap Detox.
 
@@ -100,6 +101,7 @@ Instead, you’ll create a few files to configure Cucumber and bootstrap Detox.
 Create `e2e/cucumber.config.js` to tell Cucumber where to find your feature files and step definitions:
 
 `e2e/cucumber.config.js`
+
 ```javascript
 module.exports = {
   default: {
@@ -120,6 +122,7 @@ module.exports = {
 Cucumber uses a "World" to share context between steps. Set this up in `e2e/features/support/world.ts`:
 
 `e2e/features/support/world.ts`
+
 ```typescript
 import { setDefaultTimeout, setWorldConstructor, World } from "@cucumber/cucumber";
 
@@ -137,6 +140,7 @@ setWorldConstructor(CustomWorld);
 Now, create `e2e/features/support/hooks.ts` to handle Detox initialization, app launch, and cleanup:
 
 `e2e/features/support/hooks.ts`
+
 ```typescript
 import { AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
 import { device } from "detox";
@@ -160,6 +164,7 @@ AfterAll({ timeout: 30 * 1000 }, async () => {
 You'll write feature files in Gherkin syntax, and step definitions in TypeScript, making use of Detox. Here's a simple idea to get you started.
 
 `e2e/features/Greeting.feature`
+
 ```gherkin
 Feature: Greeting
 
@@ -170,6 +175,7 @@ Feature: Greeting
 ```
 
 `e2e/features/step_definitions/greeting.ts`
+
 ```typescript
 import { Given, Then, When } from "@cucumber/cucumber";
 import { by, device, element, expect, waitFor } from "detox";
@@ -177,7 +183,9 @@ import { by, device, element, expect, waitFor } from "detox";
 import { CustomWorld } from "../support/world";
 
 Given("the app is launched", async function (this: CustomWorld) {
-  await waitFor(element(by.text("Welcome"))).toBeVisible().withTimeout(1000);
+  await waitFor(element(by.text("Welcome")))
+    .toBeVisible()
+    .withTimeout(1000);
   this.appLaunched = true;
 });
 
@@ -217,8 +225,8 @@ NODE_OPTIONS="--import tsx" detox test
 
 Thanks to the following people for their help:
 
-* [Jaydon Peters](https://medium.com/@peters.jaydon) for the post [React Native, Detox, and Cucumber](https://medium.com/@peters.jaydon/react-native-detox-and-cucumber-c2164a6eebd5) which, while now outdated, gave me the hope that this could be done.
-* [Chris Rosendorf](https://github.com/ExoMemphiz) for a lot of help figuring out the `tsx` things and wrangling the Detox internals. This would never have happened without all your help!
-* [ChatGPT, powered by OpenAI](https://openai.com/) for providing helpful suggestions, tips, and guidance throughout the process.
+- [Jaydon Peters](https://medium.com/@peters.jaydon) for the post [React Native, Detox, and Cucumber](https://medium.com/@peters.jaydon/react-native-detox-and-cucumber-c2164a6eebd5) which, while now outdated, gave me the hope that this could be done.
+- [Chris Rosendorf](https://github.com/ExoMemphiz) for a lot of help figuring out the `tsx` things and wrangling the Detox internals. This would never have happened without all your help!
+- [ChatGPT, powered by OpenAI](https://openai.com/) for providing helpful suggestions, tips, and guidance throughout the process.
 
 Any questions? Feedback? Find me on Mastodon: [@aimeerivers@queer.party](https://queer.party/@aimeerivers)

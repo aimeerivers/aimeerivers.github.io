@@ -1,0 +1,5 @@
+package-lock.json
+CHANGELOG.md
+_site
+# Jekyll template file with complex Liquid syntax
+_layouts/default.html

@@ -1,0 +1,32 @@
+{
+  "name": "aimeerivers.github.io",
+  "version": "1.0.0",
+  "description": "Aimee Rivers portfolio and blog",
+  "keywords": [
+    "blog"
+  ],
+  "homepage": "https://github.com/aimeerivers/aimeerivers.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/aimeerivers/aimeerivers.github.io/issues"
+  },
+  "license": "ISC",
+  "author": "aimee rivers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimeerivers/aimeerivers.github.io.git"
+  },
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint --fix",
+    "lint:check": "eslint",
+    "package:lint": "npx npm-package-json-lint .",
+    "start": "bundle exec jekyll serve --livereload",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint-config-plus-prettier": "4.1.10"
+  },
+  "prettier": "eslint-config-plus-prettier/prettier"
+}

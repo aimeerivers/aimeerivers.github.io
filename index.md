@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Aimee Rivers - Portfolio
 light_mode: true
+title: Aimee Rivers - Portfolio
+image: https://www.aimeerivers.com/assets/images/og-image.png
 ---
 
 # Welcome to my portfolio

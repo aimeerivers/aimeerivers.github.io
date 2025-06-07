@@ -4,7 +4,7 @@
 }
 
 .back-to-root a {
-  color: #FFF;
+  color: #fff;
   opacity: 0.75;
 }
 
@@ -59,7 +59,9 @@
   border-radius: 8px;
   padding: 15px;
   background-color: #f9f9f9;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   height: 100%; /* Ensure all projects have the same height */
 }
 
@@ -118,7 +120,9 @@
   border-radius: 8px;
   padding: 15px;
   background-color: #f9f9f9;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   height: 100%; /* Ensure all posts have the same height */
 }
 
@@ -164,7 +168,7 @@
 }
 
 .page-header[data-bg-image]::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

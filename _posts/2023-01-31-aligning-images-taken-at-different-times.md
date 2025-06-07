@@ -10,14 +10,17 @@ I have programmed repeatable drone flights using [Litchi](https://flylitchi.com/
 The alignment is good ... but it's not perfect.
 
 ## June 2022
+
 ![Sundvestvej, June 2022](/assets/images/hugin/sundvestvej-jun-2022.jpg)
 
 ## January 2023
+
 ![Sundvestvej, January 2023](/assets/images/hugin/sundvestvej-jan-2023.jpg)
 
 If we try to overlay these with a slider, we can see that the images aren't perfectly algined. We can do better!
 
 ## Comparison
+
 {% include juxtapose.html uid="326232c4-a157-11ed-b5bd-6595d9b17862" %}
 
 ## Try using AI

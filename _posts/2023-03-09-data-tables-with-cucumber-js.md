@@ -28,7 +28,6 @@ function createUser(name: string, email: string, city: string, dob: string) {
 
 ---
 
-
 # Option 1. Key-value pairs using .rowsHash()
 
 This is a 2-column table format where the left is the key and the right is the value. I like to write the keys in uppercase for readability, but it's not necessary.
@@ -47,7 +46,7 @@ This scenario will create 1 user.
 This step can be implemented like this:
 
 ```typescript
-Given('the following user exists', function (dataTable) {
+Given("the following user exists", function (dataTable) {
   const data = dataTable.rowsHash();
   createUser(data["NAME"], data["EMAIL"], data["CITY"], data["DOB"]);
 });
@@ -69,7 +68,6 @@ Creating Ganesh Raffaella (gr@example.com) who lives in Redlands and was born 19
 
 ---
 
-
 # Option 2. Table with headings using .hashes()
 
 This is a multi-row format where the first row is a heading. The step definition will need to loop through the rows.
@@ -88,7 +86,7 @@ This scenario will create 3 users.
 This step can be implemented like this:
 
 ```typescript
-Given('the following users exist', function (dataTable) {
+Given("the following users exist", function (dataTable) {
   const data = dataTable.hashes();
   for (const row of data) {
     createUser(row["NAME"], row["EMAIL"], row["CITY"], row["DOB"]);
@@ -114,7 +112,6 @@ Creating Shea Ziemann (sz@example.com) who lives in Medford and was born 1982-06
 
 ---
 
-
 # Option 3. Table without headings using .raw()
 
 You can also use a table without headings and access the raw data with indices. I don't like this because it seems less clear, but i'm just documenting it as an option in case it's useful for some reason.
@@ -133,7 +130,7 @@ This scenario will create 4 users.
 The step can be implemented like this:
 
 ```typescript
-Given('the following users exist', function (dataTable) {
+Given("the following users exist", function (dataTable) {
   const data = dataTable.raw();
   for (const row of data) {
     createUser(row[0], row[1], row[2], row[3]);
@@ -172,7 +169,7 @@ This will create 2 users.
   Scenario Outline: Create <NAME>
     Given a user called "<NAME>"  with email address "<EMAIL>" who lives in "<CITY>" and was born "<DOB>"
 
-    Examples: 
+    Examples:
       | NAME            | EMAIL          | CITY          | DOB        |
       | Vivienne Senger | vs@example.com | Everett       | 1965-11-09 |
       | Mallory Wisoky  | mw@example.com | Boynton Beach | 1927-12-09 |
@@ -181,9 +178,12 @@ This will create 2 users.
 The step can be implemented like this:
 
 ```typescript
-Given('a user called {string}  with email address {string} who lives in {string} and was born {string}', function (name, email, city, dob) {
-  createUser(name, email, city, dob);
-});
+Given(
+  "a user called {string}  with email address {string} who lives in {string} and was born {string}",
+  function (name, email, city, dob) {
+    createUser(name, email, city, dob);
+  }
+);
 ```
 
 Output:
