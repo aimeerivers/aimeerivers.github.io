@@ -5,18 +5,21 @@
 Based on analysis of your blog posts, follow these writing style guidelines when helping with content creation:
 
 ### Tone and Voice
+
 - Use a casual, approachable tone that feels conversational
 - Write in first person ("I", "my") when describing personal experiences or projects
 - Be humble and self-aware - acknowledge when you're late to trends or when things don't go perfectly
 - Include personal anecdotes and real-world context
 
 ### Structure and Organization
+
 - Start posts with clear, descriptive titles that explain what the post is about
 - Use descriptive section headers (## format) to break up content logically
 - Include a brief introduction that sets context and explains what you're trying to achieve
 - End with conclusions or reflections on what you learned
 
 ### Technical Writing Style
+
 - Explain technical concepts in accessible language
 - Include version numbers and specific details when they matter
 - Provide step-by-step instructions for tutorials
@@ -24,6 +27,7 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Mention tools, libraries, and dependencies explicitly
 
 ### Content Patterns
+
 - Include "You will need" sections for tutorial posts
 - Add image descriptions and captions that are informative
 - Include links to relevant resources, GitHub repos, and external tools
@@ -31,6 +35,7 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Provide working examples or demos when possible
 
 ### Language and Grammar
+
 - Use lowercase "i" consistently instead of "I" (your distinctive style choice), except when "I" starts a sentence
 - Use British English spelling (e.g., "colour", "realised", "favourite")
 - Use contractions naturally ("it's", "don't", "I've")
@@ -38,6 +43,7 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Use italics for emphasis on key words or phrases
 
 ### Personality Touches
+
 - Share what you learned from the experience
 - Mention tools and technologies you've used before
 - Include reflections on the broader implications of what you're doing
@@ -45,12 +51,14 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Express genuine enthusiasm for projects and discoveries
 
 ### Blog Post Metadata
+
 - Always include proper Jekyll front matter with layout, title, description
 - Include image metadata for social sharing when relevant
 - Use descriptive descriptions that explain the value or purpose of the post
 - **OG images for blog posts must always be 1200x630px** (standard social media sharing dimensions)
 
 ### Code and Technical Content
+
 - Favor readability and explanation over brevity
 - Include explanations of why you chose certain approaches
 - Mention alternative approaches you considered

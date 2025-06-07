@@ -14,12 +14,12 @@ Grab your Raspberry Pi, because we're about to build a dashboard display!
 
 ## You will need
 
-* A spare television
-* A Raspberry Pi 4 (other models will work but generation 4 is silent, has built-in WiFi and supports 4K HDMI output)
-* A micro-HDMI to HDMI cable
-* A USB to USB-C cable to power the Raspberry Pi from USB output on the television
-* A keyboard and mouse to set things up initially
-* Possibly: A micro-SD card reader to write a new operating system to SD card
+- A spare television
+- A Raspberry Pi 4 (other models will work but generation 4 is silent, has built-in WiFi and supports 4K HDMI output)
+- A micro-HDMI to HDMI cable
+- A USB to USB-C cable to power the Raspberry Pi from USB output on the television
+- A keyboard and mouse to set things up initially
+- Possibly: A micro-SD card reader to write a new operating system to SD card
 
 ![You will need](/assets/images/piboard/you-will-need.jpeg)
 
@@ -161,7 +161,7 @@ Save this script to the file:
     sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/pi/.config/chromium/Default/Preferences
     sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chromium/Default/Preferences
 
-    # Launch Chromium 
+    # Launch Chromium
     /usr/bin/chromium-browser \
       --start-fullscreen \
       --no-first-run \
@@ -177,10 +177,10 @@ The fourth block stops Chromium from complaining about unclean shutdown. Since a
 
 Lastly, the script launches Chromium with the following options:
 
-* `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case i ever need to do anything else on the Raspberry Pi.
-* `--no-first-run` - skips first-run checks (i.e. default browser)
-* `--noerrdialogs` - avoids showing any errors that could interfere with your dashboard experience
-* `--disable-infobars` - avoids annoying popups about detecting your location etc.
+- `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case i ever need to do anything else on the Raspberry Pi.
+- `--no-first-run` - skips first-run checks (i.e. default browser)
+- `--noerrdialogs` - avoids showing any errors that could interfere with your dashboard experience
+- `--disable-infobars` - avoids annoying popups about detecting your location etc.
 
 Make this script executable by anyone:
 
@@ -271,10 +271,10 @@ Dashboard now with emoji enabled.
 
 Thanks to the following sources for a lot of the inspiration that went into this post.
 
-* [Raspberry Pi (4) Kiosk / Wall Display / Dashboard](https://jonathanmh.com/raspberry-pi-4-kiosk-wall-display-dashboard/)
-* [Disable Low-voltage warning in Raspberry Pi](https://terminalwiki.com/disable-low-voltage-warning-in-raspberry-pi/)
-* [Low voltage warning message text](https://www.raspberrypi.org/forums/viewtopic.php?t=286821)
-* [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
-* [How to open a set of tabs together quickly?](https://superuser.com/questions/417205/how-to-open-a-set-of-tabs-together-quickly)
-* [Service unit configuration - systemd.service](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
-* [Tutorial: Colored emojis in Chromium](https://www.raspberrypi.org/forums/viewtopic.php?t=253484)
+- [Raspberry Pi (4) Kiosk / Wall Display / Dashboard](https://jonathanmh.com/raspberry-pi-4-kiosk-wall-display-dashboard/)
+- [Disable Low-voltage warning in Raspberry Pi](https://terminalwiki.com/disable-low-voltage-warning-in-raspberry-pi/)
+- [Low voltage warning message text](https://www.raspberrypi.org/forums/viewtopic.php?t=286821)
+- [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
+- [How to open a set of tabs together quickly?](https://superuser.com/questions/417205/how-to-open-a-set-of-tabs-together-quickly)
+- [Service unit configuration - systemd.service](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
+- [Tutorial: Colored emojis in Chromium](https://www.raspberrypi.org/forums/viewtopic.php?t=253484)

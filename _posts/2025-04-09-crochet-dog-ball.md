@@ -86,7 +86,6 @@ Close the magic loop
 
 ![Round 12](/assets/images/crochet/dog-ball/round-12.jpg)
 
-
 ### And that's it!
 
 Your dog will love their new toy!
