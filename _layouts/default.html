@@ -15,7 +15,7 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" role="banner">
+    <header class="page-header" role="banner"{% if page.image %} data-bg-image style="background-image: url('{{ page.image | replace: 'https://www.aimeerivers.com', '' }}')"{% endif %}>
       
       {% if page.url contains ".html" %}
         <div class="back-to-root"><a href="{{ '/blog' | relative_url }}">&lt; blog</a></div>
