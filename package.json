@@ -17,6 +17,15 @@
   },
   "type": "module",
   "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint --fix",
+    "lint:check": "eslint",
+    "package:lint": "npx npm-package-json-lint .",
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "devDependencies": {
+    "eslint-config-plus-prettier": "4.1.10"
+  },
+  "prettier": "eslint-config-plus-prettier/prettier"
 }
