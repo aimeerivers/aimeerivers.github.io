@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.0.0...v1.0.1) (2025-06-07)
+
+
+### Documentation
+
+* Update README with the easier way of running Jekyll server ([#3](https://github.com/aimeerivers/aimeerivers.github.io/issues/3)) ([8bebc8c](https://github.com/aimeerivers/aimeerivers.github.io/commit/8bebc8c25e6d051bb01fc0fbe2e9a00dda6bc5a2))
+
 ## 1.0.0 (2025-06-07)
 
 
