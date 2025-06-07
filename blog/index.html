@@ -18,7 +18,7 @@ image: "https://aimeerivers.github.io/assets/images/og-image.png"
         <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
       </small>
       <p>
-        {{ post.content | strip_html | truncatewords: 30 }}
+        {{ post.description }}
       </p>
     </article>
   </a>
