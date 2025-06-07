@@ -48,6 +48,7 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Always include proper Jekyll front matter with layout, title, description
 - Include image metadata for social sharing when relevant
 - Use descriptive descriptions that explain the value or purpose of the post
+- **OG images for blog posts must always be 1200x630px** (standard social media sharing dimensions)
 
 ### Code and Technical Content
 - Favor readability and explanation over brevity
