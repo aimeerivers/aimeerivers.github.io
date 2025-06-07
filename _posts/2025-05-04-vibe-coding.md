@@ -11,7 +11,7 @@ A few days ago, i was preparing for a music quiz and realized i needed a small a
 
 Since it was a simple, one-off tool that wouldn't require ongoing maintenance, i decided it was the perfect candidate for vibe coding.
 
-I used GitHub Copilot to write HTML, CSS, and JavaScript for me. i barely looked at the code it generated — i just tested the output and gave feedback.
+I used GitHub Copilot to write HTML, CSS, and JavaScript for me. I barely looked at the code it generated — i just tested the output and gave feedback.
 
 ## The Finished App
 
@@ -67,7 +67,7 @@ There was also a lot of repetitive, fiddly work — like placing ten clips on a 
 
 ## Conclusions
 
-i really enjoyed the experiment! It was freeing not to have to deeply understand the code. My only concerns were: _Does it work?_ and _Does it look okay?_ The rest was out of scope.
+I really enjoyed the experiment! It was freeing not to have to deeply understand the code. My only concerns were: _Does it work?_ and _Does it look okay?_ The rest was out of scope.
 
 Would i use this approach again? Absolutely — for small, one-off tools or prototypes. But for anything that requires long-term maintenance, i don't think Copilot is quite there yet. Maybe other tools that are more intended for vibe coding an entire project could give better results.
 
