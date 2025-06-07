@@ -115,7 +115,7 @@ The crossing triangles remind me of creases in a flag, so i decided to try the n
 
 ## Conclusion
 
-I know the outcome is far from perfect, and i know other people have done similar things before, with much better results. But i had a lot of fun trying this, and i feel like learned a lot about what genetic algorithms are, how to set them up, and how to tweak them.
+I know the outcome is far from perfect, and i know other people have done similar things before, with much better results. But i had a lot of fun trying this, and i learned a lot about what genetic algorithms are, how to set them up, and how to tweak them.
 
 ## Code
 
