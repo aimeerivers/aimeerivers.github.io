@@ -11,7 +11,7 @@ image: "https://aimeerivers.github.io/assets/images/og-image.png"
   <a href="{{ post.url }}">
     <article class="post">
       {% if post.image %}
-        <img src="{{ post.image | replace: 'https://aimeerivers.github.io', '' | replace: 'https://www.aimeerivers.com', '' }}" alt="{{ post.title }}">
+        <img src="{{ post.image | replace: 'https://www.aimeerivers.com', '' }}" alt="{{ post.title }}">
       {% endif %}
       <h2>{{ post.title }}</h2>
       <small>

@@ -2,7 +2,7 @@
 layout: default
 title: "Building a Raspberry Pi dashboard"
 description: "How to turn any television into an awesome dashboard display"
-image: "https://aimeerivers.github.io/assets/images/piboard/finished-dashboard.jpeg"
+image: "https://www.aimeerivers.com/assets/images/piboard/finished-dashboard.jpeg"
 light_mode: true
 ---
 

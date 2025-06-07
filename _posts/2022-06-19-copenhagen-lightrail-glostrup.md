@@ -2,7 +2,7 @@
 layout: default
 title: "Glostrup Lightrail"
 description: "Copenhagen Lightrail progress"
-image: "https://aimeerivers.github.io/assets/images/lightrail/glostrup/progress-og-image.jpg"
+image: "https://www.aimeerivers.com/assets/images/lightrail/glostrup/progress-og-image.jpg"
 ---
 
 I am excited about the Copenhagen Lightrail (Hovedstadens Letbane) that is due to open in 2025. Yesterday I went for a bike ride with my drone to see how they're getting on around Glostrup, which is where I live.
