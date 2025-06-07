@@ -1,0 +1,22 @@
+{
+  "name": "aimeerivers.github.io",
+  "version": "1.0.0",
+  "description": "Aimee Rivers portfolio and blog",
+  "keywords": [
+    "blog"
+  ],
+  "homepage": "https://github.com/aimeerivers/aimeerivers.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/aimeerivers/aimeerivers.github.io/issues"
+  },
+  "license": "ISC",
+  "author": "aimee rivers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimeerivers/aimeerivers.github.io.git"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
