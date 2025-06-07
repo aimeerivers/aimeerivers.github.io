@@ -5,7 +5,7 @@ description: "Copenhagen Lightrail progress"
 image: "https://www.aimeerivers.com/assets/images/lightrail/glostrup/progress-og-image.jpg"
 ---
 
-I am excited about the Copenhagen Lightrail (Hovedstadens Letbane) that is due to open in 2025. Yesterday I went for a bike ride with my drone to see how they're getting on around Glostrup, which is where I live.
+I am excited about the Copenhagen Lightrail (Hovedstadens Letbane) that is due to open in 2025. Yesterday i went for a bike ride with my drone to see how they're getting on around Glostrup, which is where i live.
 
 ## Glostrup Station
 
@@ -37,7 +37,7 @@ Looking back South now, this is a major junction where Ring 3 crosses over Roski
 
 ![Glostrup hospital](/assets/images/lightrail/glostrup/hospital.jpg)
 
-Still looking South down Norde Ringvej, I believe this is where a stop will be built for Glostrup Hospital. It is incredible how much they have had to widen the road, as they no doubt will have to for the entire 28km route of the new lightrail.
+Still looking South down Norde Ringvej, i believe this is where a stop will be built for Glostrup Hospital. It is incredible how much they have had to widen the road, as they no doubt will have to for the entire 28km route of the new lightrail.
 
 From the same spot, now looking North:
 

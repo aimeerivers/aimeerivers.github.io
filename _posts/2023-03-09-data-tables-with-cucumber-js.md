@@ -116,7 +116,7 @@ Creating Shea Ziemann (sz@example.com) who lives in Medford and was born 1982-06
 
 # Option 3. Table without headings using .raw()
 
-You can also use a table without headings and access the raw data with indices. I don't like this because it seems less clear, but I'm just documenting it as an option in case it's useful for some reason.
+You can also use a table without headings and access the raw data with indices. I don't like this because it seems less clear, but i'm just documenting it as an option in case it's useful for some reason.
 
 This scenario will create 4 users.
 

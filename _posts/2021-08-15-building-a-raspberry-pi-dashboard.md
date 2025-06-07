@@ -93,7 +93,7 @@ If you see a lightning bolt symbol in the corner of the screen, it's a warning t
 
 ![Low voltage lightning bolt warning](/assets/images/piboard/low-voltage-lightning-bolt.jpeg)
 
-In my experience, the risk of corruption is very small, and in the worst case scenario I would just reinstall Raspberry Pi OS and follow this tutorial again. I like the Raspberry Pi being powered by the television because it can be turned on and off just with a TV remote. So I choose to disable the warnings.
+In my experience, the risk of corruption is very small, and in the worst case scenario i would just reinstall Raspberry Pi OS and follow this tutorial again. i like the Raspberry Pi being powered by the television because it can be turned on and off just with a TV remote. So i choose to disable the warnings.
 
 If you want to do this, it's time to start editing a file on the Raspberry Pi. From your SSH terminal (or the terminal program on the Raspberry Pi itself) type:
 
@@ -169,7 +169,7 @@ Save this script to the file:
       --disable-infobars \
       $(curl -s "https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/${DASHBOARD}") &
 
-The config options specify where on GitHub to find the list of links that should be opened when the browser is launched. In my case I'm using organisation `danmarksradio`, a repository called `dashboards`, I want to use the `main` branch, and the filename I want to use is `teamqa.txt`. You should set these to the values that make sense for you.
+The config options specify where on GitHub to find the list of links that should be opened when the browser is launched. In my case i'm using organisation `danmarksradio`, a repository called `dashboards`, i want to use the `main` branch, and the filename i want to use is `teamqa.txt`. You should set these to the values that make sense for you.
 
 The second block sets the display to avoid sleeping, while the third block hides the mouse pointer.
 
@@ -177,7 +177,7 @@ The fourth block stops Chromium from complaining about unclean shutdown. Since a
 
 Lastly, the script launches Chromium with the following options:
 
-* `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case I ever need to do anything else on the Raspberry Pi.
+* `--start-fullscreen` - makes it fill the whole screen at start up. An alternative mode is `--kiosk` but this will literally prevent anyone from doing anything else on the Raspberry Pi. I prefer `--start-fullscreen` because it still gives the option to press F11 and come out of fullscreen in case i ever need to do anything else on the Raspberry Pi.
 * `--no-first-run` - skips first-run checks (i.e. default browser)
 * `--noerrdialogs` - avoids showing any errors that could interfere with your dashboard experience
 * `--disable-infobars` - avoids annoying popups about detecting your location etc.
@@ -258,7 +258,7 @@ If you change the service definition you will need to reload it:
 
 ## Enable emoji in Chromium
 
-The dashboard I'm using uses emoji for part of its information. By default these are not supported by Chromium on Raspberry Pi OS, but you can easily enable them:
+The dashboard i'm using uses emoji for part of its information. By default these are not supported by Chromium on Raspberry Pi OS, but you can easily enable them:
 
     sudo apt-get -y install fonts-noto-color-emoji
     sudo fc-cache -f -v
