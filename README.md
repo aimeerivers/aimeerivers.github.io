@@ -27,6 +27,6 @@ Then try again
 ### Run the Jekyll server
 
     rvm use ruby-3.1.2@blog
-    bundle exec jekyll serve
+    npm run start
 
 Visit http://localhost:4000
