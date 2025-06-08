@@ -24,9 +24,13 @@ A dedicated Test Specialist with extensive experience in software development an
 
 **Programming Languages:** TypeScript, JavaScript, Node.js, Ruby, Scala, Bash
 
-**Testing Tools:** Playwright, Cucumber, Detox, Capybara, Selenium, Appium, Gatling Frontline
+**Testing Tools:** Playwright, Cucumber, Detox, Capybara, Selenium, Appium, Gatling
 
-**DevOps Tools:** Git, GitHub, GitHub Actions, Circle CI, Jenkins, Docker, Kubernetes, Argo
+**Databases:** MongoDB, PostgreSQL, Redis
+
+**DevOps Tools:** Git, GitHub, GitHub Actions, Circle CI, Jenkins, Docker, Kubernetes
+
+**Cloud Platforms:** Scalingo, AWS, Azure, GCP
 
 ### Core Competencies
 
@@ -75,7 +79,7 @@ A dedicated Test Specialist with extensive experience in software development an
 
 **1999 - 2002:** BSc (Hons) in Computer Science at University of Portsmouth, UK
 
-**1997 – 1997:** A-Levels in French, Maths and Computing at Peter Symonds, Winchester, UK
+**1997 – 1999:** A-Levels in French, Maths and Computing at Peter Symonds, Winchester, UK
 
 ## Languages
 
