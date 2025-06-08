@@ -9,6 +9,8 @@ image: https://www.aimeerivers.com/assets/images/og-image.png
 
 This is just a small selection of the weird and wonderful things that i make.
 
+Looking for my CV? [Find it here](/cv/)
+
 <div class="projects-grid">
 
   <a href="/blog/">

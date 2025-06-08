@@ -1,0 +1,319 @@
+/* CV Styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Reset and base styles */
+.cv-body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background: #f8f9fa;
+}
+
+.cv-container {
+  max-width: 210mm; /* A4 width */
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+
+.cv-content {
+  padding: 60px;
+  max-width: none;
+}
+
+/* Actions bar */
+.cv-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #34495e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cv-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-back,
+.btn-print,
+.btn-download {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-back {
+  background: #3498db;
+  color: white;
+}
+
+.btn-back:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
+
+.btn-print {
+  background: #27ae60;
+  color: white;
+}
+
+.btn-print:hover {
+  background: #229954;
+  transform: translateY(-1px);
+}
+
+.btn-download {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-download:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* CV Header */
+.cv-content .cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.cv-content .cv-header-left {
+  flex: 1;
+}
+
+.cv-content h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  letter-spacing: -0.5px;
+}
+
+.cv-content .cv-subtitle {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #3498db;
+  margin: 0;
+}
+
+.cv-content .cv-contact {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  color: #555;
+  min-width: 280px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.cv-content .cv-contact li {
+  list-style: none;
+  margin: 8px 0;
+  display: block;
+  padding-left: 0;
+  position: static;
+}
+
+.cv-content .cv-contact li::before {
+  display: none;
+}
+
+.cv-content .cv-contact a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+/* Section headings */
+.cv-content h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 40px 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3498db;
+  position: relative;
+}
+
+/* Summary paragraph */
+.cv-content p:first-of-type {
+  font-size: 1.05em;
+  line-height: 1.7;
+  margin: 0 0 30px 0;
+  color: #34495e;
+}
+
+/* Technical skills */
+.cv-content h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 25px 0 10px 0;
+}
+
+.cv-content ul {
+  margin: 10px 0 20px 0;
+  padding-left: 0;
+}
+
+.cv-content li {
+  list-style: none;
+  margin: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.cv-content li::before {
+  content: "▶";
+  color: #3498db;
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+}
+
+.cv-content h3 {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 25px 0 5px 0;
+  line-height: 1.4;
+}
+
+/* Education and Languages sections */
+.cv-content h2 + p {
+  margin-top: 15px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .cv-container {
+    box-shadow: none;
+    margin: 0;
+    max-width: none;
+  }
+
+  .cv-content {
+    padding: 30px;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  * {
+    color: black !important;
+    background: white !important;
+    border-bottom-color: black !important;
+  }
+
+  *::before {
+    color: black !important;
+  }
+
+  .cv-content h1 {
+    font-size: 2.2em;
+  }
+
+  .cv-content h2 {
+    margin: 30px 0 15px 0;
+    page-break-after: avoid;
+  }
+
+  .cv-content h3 {
+    page-break-after: avoid;
+    margin-top: 20px;
+  }
+
+  .cv-content p,
+  .cv-content ul {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure proper page breaks */
+  .cv-content h2:first-of-type {
+    margin-top: 20px;
+  }
+
+  .cv-content .cv-contact li {
+    text-align: left;
+  }
+
+  .cv-content a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3498db;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cv-actions {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 30px;
+  }
+
+  .cv-content {
+    padding: 30px;
+  }
+
+  .cv-content h1 {
+    font-size: 2em;
+  }
+
+  .cv-content .cv-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cv-content .cv-contact {
+    min-width: auto;
+  }
+
+  .cv-content .cv-contact li {
+    text-align: left;
+  }
+
+  .cv-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-back,
+  .btn-print,
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,6 +1,8 @@
 # aimeerivers.github.io
 
-My sporadic [portfolio website](https://www.aimeerivers.com/) and [blog](https://www.aimeerivers.com/blog/), made with Jekyll, hosted on GitHub
+- [Portfolio](https://www.aimeerivers.com/)
+- [Blog](https://www.aimeerivers.com/blog/)
+- [CV](https://www.aimeerivers.com/cv/)
 
 ## Running locally
 
