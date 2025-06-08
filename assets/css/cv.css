@@ -144,6 +144,11 @@
   display: none;
 }
 
+.cv-content .cv-contact a {
+  color: #3498db;
+  text-decoration: none;
+}
+
 /* Section headings */
 .cv-content h2 {
   font-size: 1.4em;
@@ -226,6 +231,16 @@
     background: white !important;
   }
 
+  * {
+    color: black !important;
+    background: white !important;
+    border-bottom-color: black !important;
+  }
+
+  *::before {
+    color: black !important;
+  }
+
   .cv-content h1 {
     font-size: 2.2em;
   }
@@ -257,6 +272,7 @@
   .cv-content a {
     text-decoration: none;
     font-weight: bold;
+    color: #3498db;
   }
 }
 
