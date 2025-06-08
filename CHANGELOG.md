@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.1.0...v1.2.0) (2025-06-08)
+
+
+### Features
+
+* Update CV with expanded experience information ([#7](https://github.com/aimeerivers/aimeerivers.github.io/issues/7)) ([1df4305](https://github.com/aimeerivers/aimeerivers.github.io/commit/1df4305b597d761f197becd177400e7f38f734c3))
+
 ## [1.1.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.0.1...v1.1.0) (2025-06-08)
 
 
