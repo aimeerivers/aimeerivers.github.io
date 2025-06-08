@@ -1,5 +1,6 @@
 package-lock.json
 CHANGELOG.md
 _site
-# Jekyll template file with complex Liquid syntax
+# Jekyll template files with complex Liquid syntax
 _layouts/default.html
+_layouts/cv.html
