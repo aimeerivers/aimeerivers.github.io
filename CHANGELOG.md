@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.0.1...v1.1.0) (2025-06-08)
+
+
+### Features
+
+* Add CV ([#5](https://github.com/aimeerivers/aimeerivers.github.io/issues/5)) ([16db763](https://github.com/aimeerivers/aimeerivers.github.io/commit/16db7637a311f2378c821e1d46b6cb60532393b5))
+
 ## [1.0.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.0.0...v1.0.1) (2025-06-07)
 
 
