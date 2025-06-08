@@ -113,9 +113,6 @@
 .cv-content .cv-contact {
   margin: 20px 0 40px 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
   font-size: 0.95em;
   color: #555;
 }
@@ -144,16 +141,6 @@
   padding-bottom: 8px;
   border-bottom: 2px solid #3498db;
   position: relative;
-}
-
-.cv-content h2::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background: #e74c3c;
 }
 
 /* Summary paragraph */
