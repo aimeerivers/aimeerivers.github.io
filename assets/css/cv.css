@@ -277,7 +277,7 @@
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .cv-actions {
     flex-direction: column;
     gap: 15px;
@@ -308,6 +308,7 @@
   .cv-buttons {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .btn-back,
@@ -315,5 +316,9 @@
   .btn-download {
     width: 100%;
     justify-content: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    min-height: 44px;
+    box-sizing: border-box;
   }
 }
