@@ -12,8 +12,8 @@ permalink: /cv/
   </div>
   <ul class="cv-contact">
     <li>2100 Copenhagen, Denmark</li>
-    <li>+45 71 45 45 64</li>
-    <li>aimee@aimeerivers.com</li>
+    <li><a href="tel:+4571454564">+45 71 45 45 64</a></li>
+    <li><a href="mailto:aimee@aimeerivers.com">aimee@aimeerivers.com</a></li>
     <li><a href="https://linkedin.com/in/aimeerivers">linkedin.com/in/aimeerivers</a></li>
   </ul>
 </div>

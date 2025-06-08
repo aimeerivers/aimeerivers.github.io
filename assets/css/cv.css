@@ -249,6 +249,15 @@
   .cv-content h2:first-of-type {
     margin-top: 20px;
   }
+
+  .cv-content .cv-contact li {
+    text-align: left;
+  }
+
+  .cv-content a {
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
 
 /* Mobile responsiveness */
@@ -274,6 +283,10 @@
 
   .cv-content .cv-contact {
     min-width: auto;
+  }
+
+  .cv-content .cv-contact li {
+    text-align: left;
   }
 
   .cv-buttons {
