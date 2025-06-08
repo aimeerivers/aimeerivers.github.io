@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.1.0...v1.2.0) (2025-06-08)
+
+
+### Features
+
+* Update CV with expanded experience information ([#7](https://github.com/aimeerivers/aimeerivers.github.io/issues/7)) ([1df4305](https://github.com/aimeerivers/aimeerivers.github.io/commit/1df4305b597d761f197becd177400e7f38f734c3))
+
+
+### Bug Fixes
+
+* Make the CV buttons look great on mobile ([#9](https://github.com/aimeerivers/aimeerivers.github.io/issues/9)) ([fd4bfdf](https://github.com/aimeerivers/aimeerivers.github.io/commit/fd4bfdf974e82f964ccbbe79b93e129e105681f7))
+
 ## [1.1.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.0.1...v1.1.0) (2025-06-08)
 
 
