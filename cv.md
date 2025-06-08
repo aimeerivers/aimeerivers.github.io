@@ -50,7 +50,7 @@ A dedicated Test Specialist with extensive experience in software development an
 - Working with TypeScript, Cucumber, Playwright, and Detox for comprehensive testing strategies
 - Implementing and maintaining GitHub Actions workflows for continuous integration, testing, release and deployment
 - Developing tools and frameworks to help other companies integrate with Hedia's functionality
-- Staying current with the ever-changing AI landscape and exploring applications in testing
+- Keeping up with the ever-changing AI landscape and exploring applications in testing
 
 ### February 2023 – October 2023: Senior QA Engineer at Planday, Copenhagen, Denmark
 
@@ -68,12 +68,28 @@ A dedicated Test Specialist with extensive experience in software development an
 - Used a variety of tools to enable the most effective testing
 - Encouraged the entire team to take an interest in test results
 - Made it easy for anyone to write and run their own tests
+- Became fluent in Danish by being immersed in a primarily Danish-speaking company
 
 ### April 2013 – August 2018: Senior Tester at BBC, London, UK
 
+- Worked in Media Services testing video and audio transcoding and playback systems
+- Line managed a team of 8 testers, providing leadership and technical guidance
+- Pioneered automated testing approaches for media technologies previously considered impossible to test
+- Ensured quality and reliability of BBC's media delivery infrastructure during high-profile events
+
 ### March 2011 – November 2014: Independent Software Crafter at Aimee Rivers Ltd, UK
 
+- Provided development and testing services to diverse clients across multiple industries
+- Built Ruby on Rails applications and mobile solutions, including the first Android version of BufferApp
+- Delivered projects ranging from single-day engagements to multi-month contracts
+- Worked with BBC as contractor during London 2012 Olympics preparation, developing automated testing strategies
+- Adapted quickly to different technologies and client requirements across various project types
+
 ### June 2008 – March 2011: Software Crafter at Eden Development, Winchester, UK
+
+- Member of a small startup consultancy specializing in Ruby on Rails application development
+- Gained foundational skills in Test-Driven Development (TDD) and Behavior-Driven Development (BDD)
+- Learned clean code principles and agile development practices in a collaborative startup environment
 
 ## Education
 
