@@ -95,6 +95,18 @@
 }
 
 /* CV Header */
+.cv-content .cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.cv-content .cv-header-left {
+  flex: 1;
+}
+
 .cv-content h1 {
   font-size: 2.5em;
   font-weight: 700;
@@ -107,18 +119,21 @@
   font-size: 1.3em;
   font-weight: 500;
   color: #3498db;
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
 .cv-content .cv-contact {
-  margin: 20px 0 40px 0;
+  margin: 0;
   padding: 0;
-  font-size: 0.95em;
+  font-size: 0.9em;
   color: #555;
+  min-width: 280px;
+  flex-shrink: 0;
 }
 
 .cv-content .cv-contact li {
   list-style: none;
+  margin: 8px 0;
   display: flex;
   align-items: center;
 }
@@ -181,18 +196,12 @@
   top: 0.1em;
 }
 
-/* Work history entries */
-.cv-content h4 {
+.cv-content h3 {
   font-size: 1.05em;
   font-weight: 600;
   color: #2c3e50;
   margin: 25px 0 5px 0;
   line-height: 1.4;
-}
-
-.cv-content h4 strong {
-  color: #e74c3c;
-  font-weight: 700;
 }
 
 /* Education and Languages sections */
@@ -229,7 +238,7 @@
     page-break-after: avoid;
   }
 
-  .cv-content h4 {
+  .cv-content h3 {
     page-break-after: avoid;
     margin-top: 20px;
   }
@@ -261,9 +270,13 @@
     font-size: 2em;
   }
 
+  .cv-content .cv-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .cv-content .cv-contact {
-    grid-template-columns: 1fr;
-    gap: 5px;
+    min-width: auto;
   }
 
   .cv-buttons {

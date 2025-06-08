@@ -5,16 +5,18 @@ description: Senior QA Engineer & Test Specialist
 permalink: /cv/
 ---
 
-# Aimee Rivers
-
-<div class="cv-subtitle">Test Specialist</div>
-
-<ul class="cv-contact">
-  <li>2100 Copenhagen, Denmark</li>
-  <li>+45 71 45 45 64</li>
-  <li>aimee@aimeerivers.com</li>
-  <li><a href="https://linkedin.com/in/aimeerivers">linkedin.com/in/aimeerivers</a></li>
-</ul>
+<div class="cv-header">
+  <div class="cv-header-left">
+    <h1>Aimee Rivers</h1>
+    <div class="cv-subtitle">Test Specialist</div>
+  </div>
+  <ul class="cv-contact">
+    <li>2100 Copenhagen, Denmark</li>
+    <li>+45 71 45 45 64</li>
+    <li>aimee@aimeerivers.com</li>
+    <li><a href="https://linkedin.com/in/aimeerivers">linkedin.com/in/aimeerivers</a></li>
+  </ul>
+</div>
 
 A dedicated Test Specialist with extensive experience in software development and automated testing. Adept in diverse programming languages and testing tools, with a focus on DevOps processes and visibility of test results. Committed to delivering high-quality work that empowers teams and boosts confidence in product reliability.
 
