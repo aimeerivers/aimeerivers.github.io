@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.2.1...v1.3.0) (2025-07-12)
+
+
+### Features
+
+* Add a blog post about AI analysis of test results ([#13](https://github.com/aimeerivers/aimeerivers.github.io/issues/13)) ([8b68c9a](https://github.com/aimeerivers/aimeerivers.github.io/commit/8b68c9a6fbdde6ef756bc530285fdab5ad67e62b))
+
 ## [1.2.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.2.0...v1.2.1) (2025-06-20)
 
 
