@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.3.0...v1.3.1) (2025-07-13)
+
+
+### Chores
+
+* Add Let It Be as a PDF download ([#15](https://github.com/aimeerivers/aimeerivers.github.io/issues/15)) ([a87e5d7](https://github.com/aimeerivers/aimeerivers.github.io/commit/a87e5d7d4d70cd487f12aaefd1e20527f1b524f0))
+
 ## [1.3.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.2.1...v1.3.0) (2025-07-12)
 
 
