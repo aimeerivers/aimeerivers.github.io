@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.3.2...v1.4.0) (2025-07-20)
+
+
+### Features
+
+* Add blog post on integrating Xray with Cucumber ([#19](https://github.com/aimeerivers/aimeerivers.github.io/issues/19)) ([af0c6d3](https://github.com/aimeerivers/aimeerivers.github.io/commit/af0c6d3982146fe40012527672a40c160f490e79))
+
 ## [1.3.2](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.3.1...v1.3.2) (2025-07-20)
 
 
