@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.3.1...v1.3.2) (2025-07-20)
+
+
+### Chores
+
+* Update eslint-config-plus-prettier to 4.1.15 ([#17](https://github.com/aimeerivers/aimeerivers.github.io/issues/17)) ([39d1b97](https://github.com/aimeerivers/aimeerivers.github.io/commit/39d1b97e5ed82efe675aad21c1bd89fc2b306109))
+
 ## [1.3.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.3.0...v1.3.1) (2025-07-13)
 
 
