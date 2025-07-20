@@ -13,11 +13,11 @@ But there was always one missing piece that frustrated me: **the ability for any
 
 When your test scenarios live in a code repository, you need a text editor, knowledge of Git, and familiarity with pull requests just to try out a new test. In practice, this meant i was the only one writing Cucumber scenarios.
 
-*Note: This blog post assumes you're using Jira and Xray Cloud, and have some sort of CI setup (GitHub Actions, Jenkins, Travis CI, etc).*
+_Note: This blog post assumes you're using Jira and Xray Cloud, and have some sort of CI setup (GitHub Actions, Jenkins, Travis CI, etc)._
 
 ## The Bold Move: Put Your Scenarios in Jira
 
-Here's the thing about Xray and Cucumber that most people don't realise: *they work extremely well together*, but only if you're willing to make a bold architectural decision. You have to move your test scenarios out of your code repository and into Jira.
+Here's the thing about Xray and Cucumber that most people don't realise: _they work extremely well together_, but only if you're willing to make a bold architectural decision. You have to move your test scenarios out of your code repository and into Jira.
 
 To be clear: i'm only talking about moving Gherkin `.feature` files. Your step definitions, page objects, test utilities, and all other supporting code stay exactly where they are in your repository. These count as code, and are always version-controlled and code-reviewed. But the mind-shift is realising that test scenarios are not code.
 
@@ -27,11 +27,12 @@ When you move test scenarios into Jira using Xray, suddenly anyone on your team 
 - write a completely new scenario
 - create a Test Plan for a feature
 - create a Test Execution (choosing iOS, Android, or whatever platforms you support)
-- send it to run on CI *with the press of a button*
+- send it to run on CI _with the press of a button_
 
 No Git knowledge required. No pull requests. No waiting for code reviews. Just write your test scenario in plain English and run it.
 
 ![Screenshot showing Xray Test Repository interface with a list of Cucumber scenarios](/assets/images/xray-cucumber/xray-test-list.png)
+
 <p align="center"><em>Xray Test Repository showing Cucumber scenarios as individual Tests, grouped into Test Sets</em></p>
 
 ## How It Works
@@ -47,6 +48,7 @@ Start with your Cucumber scenarios running on CI in the traditional way, reading
 Once your test scenarios are running reliably, import them into Xray. Each Cucumber scenario becomes an individual Test in Xray. You can use Xray Preconditions to share common setup steps between tests.
 
 ![Screenshot of Xray Test showing a Cucumber scenario with Gherkin syntax](/assets/images/xray-cucumber/xray-test-detail.png)
+
 <p align="center"><em>Individual Test in Xray showing a Cucumber scenario with Gherkin syntax</em></p>
 
 ### Step 3: Add Jira Automation for CI Triggers
@@ -54,6 +56,7 @@ Once your test scenarios are running reliably, import them into Xray. Each Cucum
 This is where the magic happens. Set up a Jira automation to trigger your CI system with the Test Execution key. You could automate this to happen when the Test Execution is created, or when it enters a specific state, but i wanted it to be an intentional action, so i added a button.
 
 ![Screenshot of Jira Automation for triggering CI](/assets/images/xray-cucumber/jira-automation-trigger-ci.png)
+
 <p align="center"><em>Jira Automation that triggers CI to run</em></p>
 
 Your CI will need to know the Test Execution key, and potentially the platform that it should run the tests on:
@@ -61,7 +64,7 @@ Your CI will need to know the Test Execution key, and potentially the platform t
 ```json
 {
   "test_execution_key": "HDAST-73",
-  "platform": "iOS",
+  "platform": "iOS"
 }
 ```
 
@@ -74,23 +77,24 @@ In GitHub Actions that looks like this:
 ```yaml
 - name: Fetch test scenarios from Xray
   run: |
-      XRAY_TOKEN=$(curl -H "Content-Type: application/json" \
-        -X POST \
-        --data '{ "client_id": "${XRAY_CLIENT_ID}", "client_secret": "${XRAY_CLIENT_SECRET}" }' \
-        https://xray.cloud.getxray.app/api/v2/authenticate | jq -r '.')
+    XRAY_TOKEN=$(curl -H "Content-Type: application/json" \
+      -X POST \
+      --data '{ "client_id": "${XRAY_CLIENT_ID}", "client_secret": "${XRAY_CLIENT_SECRET}" }' \
+      https://xray.cloud.getxray.app/api/v2/authenticate | jq -r '.')
 
-      curl -H "Content-Type: application/json" \
-        -X GET \
-        -H "Authorization: Bearer ${XRAY_TOKEN}" \
-        "https://xray.cloud.getxray.app/api/v2/export/cucumber?keys=${TEST_EXECUTION_KEY}" \
-        --output xray_scenarios.zip;
+    curl -H "Content-Type: application/json" \
+      -X GET \
+      -H "Authorization: Bearer ${XRAY_TOKEN}" \
+      "https://xray.cloud.getxray.app/api/v2/export/cucumber?keys=${TEST_EXECUTION_KEY}" \
+      --output xray_scenarios.zip;
 
-      unzip -o xray_scenarios.zip -d e2e/features
+    unzip -o xray_scenarios.zip -d e2e/features
 ```
 
 Now that your CI has the features it needs, Cucumber can run as normal.
 
 ![Test Execution running on CI](/assets/images/xray-cucumber/testing-in-progress.jpg)
+
 <p align="center"><em>Test Execution running on CI</em></p>
 
 ### Step 5: Post Results Back to Xray
@@ -101,21 +105,23 @@ After running all the scenarios, your CI should post the results back to Xray so
 - name: Send test results to Xray
   if: always()
   run: |
-      curl -X POST \
-        -H "Authorization: Bearer ${XRAY_TOKEN}" \
-        -H "Content-Type: application/json" \
-        --data-binary "@e2e/reports/cucumber.json" \
-        https://xray.cloud.getxray.app/api/v2/import/execution/cucumber
+    curl -X POST \
+      -H "Authorization: Bearer ${XRAY_TOKEN}" \
+      -H "Content-Type: application/json" \
+      --data-binary "@e2e/reports/cucumber.json" \
+      https://xray.cloud.getxray.app/api/v2/import/execution/cucumber
 ```
 
 Xray updates the Test Execution to show the results from CI.
 
 ![Screenshot showing Test Execution results in Xray with pass/fail status](/assets/images/xray-cucumber/test-execution-results.png)
+
 <p align="center"><em>Test Execution in Xray showing results imported from CI</em></p>
 
 Test failures are now automatically documented in Xray. Any screenshots that were taken are also imported to Xray and attached as evidence.
 
 ![Screenshot showing exactly where a test scenario failed](/assets/images/xray-cucumber/test-execution-failure.png)
+
 <p align="center"><em>You can see exactly where the test scenario failed, and why</em></p>
 
 Retesting failed scenarios is simple: Xray helps you to set up a new Test Execution, just with the failing scenarios.
@@ -140,7 +146,7 @@ When test scenarios live in Jira, they become part of your regular workflow. Pro
 
 I'll be honest - there is a bit of a learning curve here. Your team will need to understand how Test Plans and Test Executions work in Xray. You'll need to establish conventions for how scenarios are written and organised. And yes, you'll lose some of the benefits of having tests version-controlled alongside your code.
 
-But i think the trade-off is worth it. When i made this change, test scenario creation suddenly became something the whole team could contribute to. Team members were setting up tests just to try it out - because it was so *easy*. That had never happened before!
+But i think the trade-off is worth it. When i made this change, test scenario creation suddenly became something the whole team could contribute to. Team members were setting up tests just to try it out - because it was so _easy_. That had never happened before!
 
 ## Questions
 
@@ -154,7 +160,7 @@ Your step definitions are your source of truth for how steps are implemented. Xr
 
 ### What if we want to version control scenarios too?
 
-Xray automatically keeps a version history of each Test, so you can see who changed what and when. And if necessary, you can always export scenarios from Xray back to your repo. 
+Xray automatically keeps a version history of each Test, so you can see who changed what and when. And if necessary, you can always export scenarios from Xray back to your repo.
 
 ### Can we mix Jira scenarios with repo scenarios?
 
@@ -170,10 +176,10 @@ Have you tried integrating Xray with your Cucumber tests? I'd love to hear about
 
 ---
 
-*This post is part of an ongoing series about making automated testing more accessible. You might also enjoy these previous posts:*
+_This post is part of an ongoing series about making automated testing more accessible. You might also enjoy these previous posts:_
 
-* *[AI analysis for failing Cucumber scenarios](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios/)*
-* *[Testing React Native apps with Cucumber and Detox](/2025/03/09/testing-react-native-apps-with-cucumber-and-detox/)*
-* *[Building testing dashboards](/2021/08/15/building-a-raspberry-pi-dashboard/)*
+- _[AI analysis for failing Cucumber scenarios](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios/)_
+- _[Testing React Native apps with Cucumber and Detox](/2025/03/09/testing-react-native-apps-with-cucumber-and-detox/)_
+- _[Building testing dashboards](/2021/08/15/building-a-raspberry-pi-dashboard/)_
 
 Any questions? Feedback? Find me on Mastodon: [@aimeerivers@queer.party](https://queer.party/@aimeerivers) or LinkedIn: [aimeerivers](https://www.linkedin.com/in/aimeerivers/)
