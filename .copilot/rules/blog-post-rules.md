@@ -17,6 +17,7 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Use descriptive section headers (## format) to break up content logically
 - Include a brief introduction that sets context and explains what you're trying to achieve
 - End with conclusions or reflections on what you learned
+- **For tutorials, structure as: Problem → Solution → How It Works → Benefits → Questions**
 
 ### Technical Writing Style
 
@@ -33,6 +34,9 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Include links to relevant resources, GitHub repos, and external tools
 - Share both successes and failures/challenges honestly
 - Provide working examples or demos when possible
+- **Add assumption notes** at the top of technical posts (e.g., "This post assumes you're using...")
+- **Include FAQ/Questions sections** for complex tutorials to address practical concerns
+- **Add contact information** at the end encouraging readers to share experiences
 
 ### Language and Grammar
 
@@ -56,6 +60,7 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Include image metadata for social sharing when relevant
 - Use descriptive descriptions that explain the value or purpose of the post
 - **OG images for blog posts must always be 1200x630px** (standard social media sharing dimensions)
+- **Image captions should use centered HTML formatting:** `<p align="center"><em>Caption text</em></p>`
 
 ### Code and Technical Content
 
@@ -63,5 +68,14 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Include explanations of why you chose certain approaches
 - Mention alternative approaches you considered
 - Be honest about limitations or areas where you needed help
+- **Use specific, working code examples** with proper syntax highlighting
+- **Include realistic example data** where appropriate
+
+### Collaboration and Feedback
+
+- **Always encourage reader engagement** by asking about their experiences
+- **Link to related blog posts** at the end to create a cohesive series
+- **Include social media contact info** (Mastodon and LinkedIn) for ongoing conversations
+- **Reference previous work authentically** (e.g., mentioning AI analysis work you've done)
 
 Remember: Your writing style is personal, thoughtful, and educational. You share not just what you did, but why you did it and what you learned along the way.
