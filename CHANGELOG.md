@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.4.0...v1.4.1) (2025-07-21)
+
+
+### Bug Fixes
+
+* Clarify that test scenarios in Jira are documentation, not code ([#21](https://github.com/aimeerivers/aimeerivers.github.io/issues/21)) ([d5e2048](https://github.com/aimeerivers/aimeerivers.github.io/commit/d5e2048260052a53b4c11f8b84091d0a5e7f61ba))
+
 ## [1.4.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.3.2...v1.4.0) (2025-07-20)
 
 
