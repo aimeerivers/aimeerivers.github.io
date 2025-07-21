@@ -19,7 +19,7 @@ _Note: This blog post assumes you're using Jira and Xray Cloud, and have some so
 
 Here's the thing about Xray and Cucumber that most people don't realise: _they work extremely well together_, but only if you're willing to make a bold architectural decision. You have to move your test scenarios out of your code repository and into Jira.
 
-To be clear: i'm only talking about moving Gherkin `.feature` files. Your step definitions, page objects, test utilities, and all other supporting code stay exactly where they are in your repository. These count as code, and are always version-controlled and code-reviewed. But the mind-shift is realising that test scenarios are not code.
+To be clear: i'm only talking about moving Gherkin `.feature` files. Your step definitions, page objects, test utilities, and all other supporting code stay exactly where they are in your repository. These count as code, and are always version-controlled and code-reviewed. But the mind-shift is realising that test scenarios are not code. They are _documentation_, which happens to be testable.
 
 When you move test scenarios into Jira using Xray, suddenly anyone on your team can:
 
@@ -172,7 +172,7 @@ Xray and Cucumber really are better together than you might think. But you have 
 
 Sometimes the most powerful architectural decisions are the ones that feel a bit uncomfortable at first. Moving scenarios into Jira was one of those decisions for me, and it's transformed how my teams approach testing.
 
-Have you tried integrating Xray with your Cucumber tests? I'd love to hear about your experiences, especially if you've found other creative ways to make automated testing more accessible to your whole team.
+Have you tried integrating Xray with your Cucumber scenarios? I'd love to hear about your experiences, especially if you've found other creative ways to make automated testing more accessible to your whole team.
 
 ---
 
