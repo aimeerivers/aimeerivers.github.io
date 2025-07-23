@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.5.0...v1.5.1) (2025-07-23)
+
+
+### Bug Fixes
+
+* Update links in blog post to include .html extension so that they work properly ([#25](https://github.com/aimeerivers/aimeerivers.github.io/issues/25)) ([d9a198b](https://github.com/aimeerivers/aimeerivers.github.io/commit/d9a198b25f8a1266264828464125cb0e471cc69f))
+
 ## [1.5.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.4.0...v1.5.0) (2025-07-21)
 
 
