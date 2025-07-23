@@ -178,8 +178,8 @@ Have you tried integrating Xray with your Cucumber scenarios? I'd love to hear a
 
 _This post is part of an ongoing series about making automated testing more accessible. You might also enjoy these previous posts:_
 
-- _[AI analysis for failing Cucumber scenarios](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios/)_
-- _[Testing React Native apps with Cucumber and Detox](/2025/03/09/testing-react-native-apps-with-cucumber-and-detox/)_
-- _[Building testing dashboards](/2021/08/15/building-a-raspberry-pi-dashboard/)_
+- _[AI analysis for failing Cucumber scenarios](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios.html)_
+- _[Testing React Native apps with Cucumber and Detox](/2025/03/09/testing-react-native-apps-with-cucumber-and-detox.html)_
+- _[Building testing dashboards](/2021/08/15/building-a-raspberry-pi-dashboard.html)_
 
 Any questions? Feedback? Find me on Mastodon: [@aimeerivers@queer.party](https://queer.party/@aimeerivers) or LinkedIn: [aimeerivers](https://www.linkedin.com/in/aimeerivers/)
