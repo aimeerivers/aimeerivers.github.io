@@ -7,7 +7,7 @@ image: /assets/images/xray-cucumber/og-image.png
 
 # How Xray + Cucumber Transformed My Team's Testing
 
-For years, i've been passionate about making automated testing accessible to everyone. Cucumber has always been a huge part of that mission: it puts testing into plain English, creates beautifully readable reports, and (thanks to some [AI analysis](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios/) work i've done recently) can even make test failures more understandable. I love seeing automated test results displayed prominently on dashboards where the whole team can see them.
+For years, i've been passionate about making automated testing accessible to everyone. Cucumber has always been a huge part of that mission: it puts testing into plain English, creates beautifully readable reports, and (thanks to some [AI analysis](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios.html) work i've done recently) can even make test failures more understandable. I love seeing automated test results displayed prominently on dashboards where the whole team can see them.
 
 But there was always one missing piece that frustrated me: **the ability for anyone to write a new test and schedule it for execution**.
 
