@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.5.1...v1.5.2) (2025-08-25)
+
+
+### Chores
+
+* Update dependencies ([#27](https://github.com/aimeerivers/aimeerivers.github.io/issues/27)) ([3cb319f](https://github.com/aimeerivers/aimeerivers.github.io/commit/3cb319f495d73cbc11f8265ec51f48a3c0062db7))
+
 ## [1.5.1](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.5.0...v1.5.1) (2025-07-23)
 
 
