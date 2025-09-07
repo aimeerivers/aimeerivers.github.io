@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.5.2...v1.6.0) (2025-09-07)
+
+
+### Features
+
+* Add Random Abstract Art project to portfolio ([#29](https://github.com/aimeerivers/aimeerivers.github.io/issues/29)) ([e0d28c7](https://github.com/aimeerivers/aimeerivers.github.io/commit/e0d28c7d8efe57257a8aaa8e6e9abdf2e505e960))
+
 ## [1.5.2](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.5.1...v1.5.2) (2025-08-25)
 
 
