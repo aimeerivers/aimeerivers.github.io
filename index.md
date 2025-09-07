@@ -37,6 +37,14 @@ Looking for my CV? [Find it here](/cv/)
     </div>
   </a>
 
+  <a href="/random-art/">
+    <div class="project">
+      <img src="/assets/images/portfolio/random-art.png" alt="Random Abstract Art Thumbnail">
+      <h2>Random Abstract Art</h2>
+      <p>Randomly generated ever changing abstract art.</p>
+    </div>
+  </a>
+
   <a href="/daily-color/">
     <div class="project">
       <img src="/assets/images/portfolio/daily-color.png" alt="Daily Color Thumbnail">
