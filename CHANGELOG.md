@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.6.0...v1.7.0) (2025-09-12)
+
+
+### Features
+
+* Add a new blog post about Cucumber custom parameter types ([#31](https://github.com/aimeerivers/aimeerivers.github.io/issues/31)) ([dc5cc2a](https://github.com/aimeerivers/aimeerivers.github.io/commit/dc5cc2a0c874760fab7186c318d2558590491a13))
+
 ## [1.6.0](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.5.2...v1.6.0) (2025-09-07)
 
 
